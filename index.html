@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#6C63FF">
     <title>TutorIQ - Where Procrastinators Get Ahead</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -46,6 +46,7 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100%;
             position: relative;
+            touch-action: pan-y pan-x;
         }
         
         .container {
@@ -1603,8 +1604,8 @@
         @viewport {
             width: device-width;
             initial-scale: 1.0;
-            maximum-scale: 1.0;
-            user-scalable: 0;
+            maximum-scale: 5.0;
+            user-scalable: yes;
         }
         
         /* Fix for Android font rendering */
@@ -1651,6 +1652,42 @@
                 max-width: calc(100% - 40px);
                 border-radius: 12px;
             }
+        }
+        
+        /* Critical fix for scrolling issues on mobile */
+        .scroll-container {
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+        
+        /* Fix for position fixed/absolute issues on mobile */
+        .fixed-element {
+            position: fixed;
+            z-index: 100;
+        }
+        
+        /* Fix for potential flexbox issues on mobile */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* Fix for potential height calculation issues */
+        .full-height {
+            height: 100%;
+        }
+        
+        /* Fix for potential width calculation issues */
+        .full-width {
+            width: 100%;
+        }
+        
+        /* Fix for potential touch event issues */
+        .touch-target {
+            min-height: 48px;
+            min-width: 48px;
         }
     </style>
 </head>
@@ -1732,7 +1769,7 @@
                 <div class="feature-item purple">
                     <i class="fas fa-clipboard-list"></i>
                     <h3>Question Banks</h3>
-                    <p>To practice and become perfect</p>
+                    <p>To practice and perfect</p>
                 </div>
                 <div class="feature-item blue">
                     <i class="fas fa-flask"></i>
@@ -1879,7 +1916,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>A: Yes! Demo notes are <strong class="">free</strong>. Click on the "Get Demo Notes Here"</p>
+                        <p>A: Yes! Demo notes are <strong>free</strong>. Click on the "Get Demo Notes Here"</p>
                     </div>
                 </div>
             </div>
@@ -1983,7 +2020,7 @@
             
             <div class="qr-modal-image-container">
                 <!-- Primary QR Code Image -->
-                <img id="primaryQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=upi://pay?pa=rehansayyed2006@okaxis&amp;pn=TutorIQ&amp;tn=Notes%20Payment" alt="Payment QR Code" class="qr-code-image" style="display: block;">
+                <img id="primaryQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=rehansayyed2006@okaxis&pn=TutorIQ&tn=Notes%20Payment" alt="Payment QR Code" class="qr-code-image" style="display: block;">
                 
                 <!-- Fallback if primary image fails to load -->
                 <div id="qrFallback" class="qr-fallback" style="display: none;">
@@ -2171,12 +2208,34 @@
             revealOnScroll(); // Check on initial load
         });
         
-        // Prevent horizontal scrolling on mobile
+        // Fix for critical scrolling issues on mobile
         document.addEventListener('touchmove', function(event) {
+            // Only prevent pinch to zoom which can cause scrolling issues
             if (event.scale !== 1) {
                 event.preventDefault();
             }
         }, { passive: false });
+        
+        // Fix for potential scrolling container issues
+        function ensureScrollingWorks() {
+            // Check if body is scrollable
+            const body = document.body;
+            const html = document.documentElement;
+            
+            // If content height is greater than viewport height, ensure scrolling is enabled
+            if (body.scrollHeight > body.clientHeight || html.scrollHeight > html.clientHeight) {
+                body.style.overflowY = 'auto';
+                html.style.overflowY = 'auto';
+                
+                // Ensure touch scrolling works
+                body.style.webkitOverflowScrolling = 'touch';
+                html.style.webkitOverflowScrolling = 'touch';
+            }
+        }
+        
+        // Call the function on load and resize
+        window.addEventListener('load', ensureScrollingWorks);
+        window.addEventListener('resize', ensureScrollingWorks);
         
         // Add loading animation
         window.addEventListener('load', function() {
@@ -2197,6 +2256,14 @@
         
         // Initialize history state for Android back button
         window.history.pushState(null, null, window.location.href);
+        
+        // Fix for email links on mobile
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Let the default behavior happen for mailto links
+                return true;
+            });
+        });
     </script>
 
 </body></html>
