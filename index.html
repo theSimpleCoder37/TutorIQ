@@ -23,19 +23,16 @@
             --transition-speed: 0.3s;
             --mobile-padding: 15px;
         }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         html {
             scroll-behavior: smooth;
             height: 100%;
             overflow-x: hidden;
         }
-        
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text-dark);
@@ -46,16 +43,14 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100%;
             position: relative;
-            touch-action: pan-y pan-x;
+            touch-action: pan-y; /* Allow vertical scrolling on mobile */
         }
-        
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 var(--mobile-padding);
         }
-        
         /* Header and Logo */
         header {
             padding: 15px 0;
@@ -66,14 +61,12 @@
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        
         .logo {
             display: flex;
             align-items: center;
             font-size: 24px;
             font-weight: 700;
         }
-        
         .logo-icon {
             width: 40px;
             height: 40px;
@@ -81,26 +74,21 @@
             position: relative;
             flex-shrink: 0;
         }
-        
         .logo-icon svg {
             width: 100%;
             height: 100%;
         }
-        
         .logo-text {
             display: flex;
         }
-        
         .logo-text .tutor {
             color: var(--primary-purple);
         }
-        
         .logo-text .iq {
             color: var(--primary-blue);
             font-weight: 700;
             position: relative;
         }
-        
         .logo-text .iq::after {
             content: '';
             position: absolute;
@@ -111,37 +99,31 @@
             background: var(--primary-blue);
             transform: rotate(-2deg);
         }
-        
         /* Hero Section */
         .hero {
             padding: var(--section-padding);
             background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(64, 191, 255, 0.05) 100%);
             text-align: center;
         }
-        
         .hero h1 {
             font-size: 28px;
             margin-bottom: 12px;
             color: var(--text-dark);
         }
-        
         .hero h2 {
             font-size: 18px;
             font-weight: 500;
             color: var(--text-light);
             margin-bottom: 20px;
         }
-        
         .hero .highlight {
             font-weight: 600;
             color: var(--primary-purple);
         }
-        
         .hero .coming-soon {
             color: var(--primary-blue);
             font-weight: 500;
         }
-        
         .btn-primary {
             display: inline-block;
             background: var(--primary-purple);
@@ -161,7 +143,6 @@
             z-index: 1;
             -webkit-tap-highlight-color: transparent;
         }
-        
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -174,22 +155,18 @@
             transition: transform var(--transition-speed) ease;
             z-index: -1;
         }
-        
         .btn-primary:hover::before {
             transform: translateX(0);
         }
-        
         .btn-primary:hover {
             background: #5a52e0;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
         }
-        
         /* Section Styling */
         section {
             padding: var(--section-padding);
         }
-        
         .section-title {
             font-size: 24px;
             margin-bottom: 20px;
@@ -198,7 +175,6 @@
             position: relative;
             padding-bottom: 15px;
         }
-        
         .section-title::after {
             content: '';
             position: absolute;
@@ -210,19 +186,16 @@
             background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
             border-radius: 3px;
         }
-        
         /* Features Section */
         .features {
             background-color: var(--bg-light);
         }
-        
         .feature-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 40px;
         }
-        
         .feature-item {
             background: white;
             border-radius: var(--card-border-radius);
@@ -236,47 +209,38 @@
             align-items: center;
             justify-content: flex-start;
         }
-        
         .feature-item:hover {
             transform: translateY(-8px);
             box-shadow: var(--card-hover-shadow);
         }
-        
         .feature-item i {
             font-size: 36px;
             margin-bottom: 15px;
             display: block;
             transition: transform var(--transition-speed) ease;
         }
-        
         .feature-item:hover i {
             transform: scale(1.1);
         }
-        
         .feature-item.purple i {
             color: var(--primary-purple);
         }
-        
         .feature-item.blue i {
             color: var(--primary-blue);
         }
-        
         .feature-item h3 {
             font-size: 18px;
             margin-bottom: 10px;
             color: var(--text-dark);
         }
-        
         .feature-item p {
             font-size: 14px;
             color: var(--text-light);
         }
-        
         /* Pricing Section */
         .pricing {
             background-color: white;
         }
-        
         .pricing-cards {
             display: flex;
             justify-content: center;
@@ -284,7 +248,6 @@
             margin-top: 40px;
             flex-wrap: wrap;
         }
-        
         .pricing-card {
             background: white;
             border-radius: var(--card-border-radius);
@@ -301,7 +264,6 @@
             flex-direction: column;
             height: 100%;
         }
-        
         .pricing-card::before {
             content: '';
             position: absolute;
@@ -311,16 +273,13 @@
             height: 5px;
             background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
         }
-        
         .pricing-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--card-hover-shadow);
         }
-        
         .pricing-card.featured {
             border-color: var(--primary-purple);
         }
-        
         .pricing-card.featured::before {
             height: 100%;
             width: 5px;
@@ -328,7 +287,6 @@
             left: auto;
             background: var(--primary-purple);
         }
-        
         .pricing-card.featured::after {
             content: 'Best Value';
             position: absolute;
@@ -341,13 +299,11 @@
             transform: rotate(45deg);
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
-        
         .pricing-card h3 {
             font-size: 22px;
             margin-bottom: 15px;
             color: var(--text-dark);
         }
-        
         .pricing-card .price {
             font-size: 42px;
             font-weight: 700;
@@ -356,7 +312,6 @@
             position: relative;
             display: inline-block;
         }
-        
         .pricing-card .price::after {
             content: '';
             position: absolute;
@@ -367,13 +322,11 @@
             background: var(--primary-purple);
             border-radius: 2px;
         }
-        
         .pricing-card .price span {
             font-size: 16px;
             font-weight: 400;
             color: var(--text-light);
         }
-        
         .pricing-card ul {
             list-style: none;
             margin-bottom: 30px;
@@ -381,7 +334,6 @@
             padding-left: 10px;
             flex-grow: 1;
         }
-        
         .pricing-card ul li {
             padding: 10px 0;
             border-bottom: 1px solid var(--border-color);
@@ -389,7 +341,6 @@
             position: relative;
             padding-left: 25px;
         }
-        
         .pricing-card ul li::before {
             content: "✓";
             color: var(--primary-purple);
@@ -398,28 +349,23 @@
             left: 0;
             top: 10px;
         }
-        
         .pricing-card ul li:last-child {
             border-bottom: none;
         }
-        
         .pricing-card .btn-primary {
             margin-top: auto;
             width: 100%;
         }
-        
         /* Testimonials Section */
         .testimonials {
             background-color: var(--bg-light);
         }
-        
         .testimonial-cards {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 40px;
         }
-        
         .testimonial-card {
             background: white;
             border-radius: var(--card-border-radius);
@@ -429,7 +375,6 @@
             overflow: hidden;
             height: 100%;
         }
-        
         .testimonial-card::before {
             content: '"';
             position: absolute;
@@ -440,7 +385,6 @@
             font-family: Georgia, serif;
             line-height: 1;
         }
-        
         .testimonial-card p {
             font-style: italic;
             margin-bottom: 20px;
@@ -450,19 +394,16 @@
             z-index: 1;
             padding-left: 15px;
         }
-        
         .testimonial-card .author {
             font-weight: 600;
             color: var(--text-dark);
             font-size: 15px;
             text-align: right;
         }
-        
         /* Comparison Section */
         .comparison {
             background-color: white;
         }
-        
         .comparison-table {
             width: 100%;
             max-width: 100%;
@@ -473,43 +414,35 @@
             overflow: hidden;
             font-size: 14px;
         }
-        
         .comparison-table th, .comparison-table td {
             padding: 15px 15px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
         }
-        
         .comparison-table th {
             background-color: var(--bg-light);
             font-weight: 600;
             font-size: 15px;
             color: var(--text-dark);
         }
-        
         .comparison-table tr:last-child td {
             border-bottom: none;
         }
-        
         .comparison-table tr:nth-child(even) {
             background-color: rgba(108, 99, 255, 0.03);
         }
-        
         .comparison-table .highlight {
             color: var(--primary-purple);
             font-weight: 600;
         }
-        
         /* FAQ Section */
         .faq {
             background-color: var(--bg-light);
         }
-        
         .faq-list {
             max-width: 100%;
             margin: 40px auto 0;
         }
-        
         .faq-item {
             background: white;
             border-radius: var(--card-border-radius);
@@ -518,11 +451,9 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all var(--transition-speed) ease;
         }
-        
         .faq-item:hover {
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         }
-        
         .faq-question {
             padding: 20px;
             font-weight: 600;
@@ -534,17 +465,14 @@
             transition: background-color var(--transition-speed) ease;
             -webkit-tap-highlight-color: transparent;
         }
-        
         .faq-question:hover {
             background-color: rgba(108, 99, 255, 0.05);
         }
-        
         .faq-question i {
             color: var(--primary-purple);
             transition: transform var(--transition-speed) ease;
             font-size: 18px;
         }
-        
         .faq-answer {
             padding: 0 20px;
             max-height: 0;
@@ -552,33 +480,27 @@
             transition: max-height 0.4s ease, padding 0.4s ease;
             background-color: rgba(108, 99, 255, 0.02);
         }
-        
         .faq-item.active .faq-answer {
             padding: 0 20px 20px;
             max-height: 300px;
         }
-        
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-        
         .faq-answer p {
             font-size: 15px;
             padding: 10px 0;
         }
-        
         /* App Preview Section */
         .app-preview {
             background-color: white;
         }
-        
         .app-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
             margin-top: 40px;
         }
-        
         .app-feature {
             text-align: center;
             background: var(--bg-light);
@@ -591,34 +513,28 @@
             align-items: center;
             justify-content: flex-start;
         }
-        
         .app-feature:hover {
             transform: translateY(-5px);
             box-shadow: var(--card-hover-shadow);
         }
-        
         .app-feature i {
             font-size: 36px;
             color: var(--primary-purple);
             margin-bottom: 15px;
             transition: transform var(--transition-speed) ease;
         }
-        
         .app-feature:hover i {
             transform: scale(1.1);
         }
-        
         .app-feature h4 {
             font-size: 18px;
             margin-bottom: 10px;
             color: var(--text-dark);
         }
-        
         .app-feature p {
             color: var(--text-light);
             font-size: 14px;
         }
-        
         .phone-mockup {
             width: 220px;
             height: 440px;
@@ -631,11 +547,9 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
             transition: transform 0.5s ease;
         }
-        
         .phone-mockup:hover {
             transform: translateY(-10px);
         }
-        
         .phone-mockup::before {
             content: '';
             position: absolute;
@@ -646,7 +560,6 @@
             background: linear-gradient(135deg, rgba(108, 99, 255, 0.2) 0%, rgba(64, 191, 255, 0.2) 100%);
             z-index: 1;
         }
-        
         .phone-mockup::after {
             content: 'TutorIQ AI';
             position: absolute;
@@ -659,13 +572,11 @@
             z-index: 2;
             text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
         }
-        
         /* Vision Section */
         .vision {
             background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(64, 191, 255, 0.05) 100%);
             text-align: center;
         }
-        
         .vision-points {
             display: flex;
             justify-content: center;
@@ -673,7 +584,6 @@
             gap: 25px;
             margin-top: 40px;
         }
-        
         .vision-point {
             background: white;
             border-radius: var(--card-border-radius);
@@ -688,34 +598,28 @@
             align-items: center;
             justify-content: flex-start;
         }
-        
         .vision-point:hover {
             transform: translateY(-8px);
             box-shadow: var(--card-hover-shadow);
         }
-        
         .vision-point i {
             font-size: 36px;
             color: var(--primary-purple);
             margin-bottom: 15px;
             transition: transform var(--transition-speed) ease;
         }
-        
         .vision-point:hover i {
             transform: scale(1.1);
         }
-        
         .vision-point h4 {
             font-size: 18px;
             margin-bottom: 10px;
             color: var(--text-dark);
         }
-        
         .vision-point p {
             font-size: 14px;
             color: var(--text-light);
         }
-        
         /* CTA Section */
         .cta {
             background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-blue) 100%);
@@ -725,7 +629,6 @@
             position: relative;
             overflow: hidden;
         }
-        
         .cta::before {
             content: '';
             position: absolute;
@@ -736,14 +639,12 @@
             background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIvPjwvcGF0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
             opacity: 0.1;
         }
-        
         .cta h2 {
             font-size: 28px;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
-        
         .cta p {
             font-size: 18px;
             margin-bottom: 30px;
@@ -753,7 +654,6 @@
             position: relative;
             z-index: 1;
         }
-        
         .btn-white {
             display: inline-block;
             background: white;
@@ -770,7 +670,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             -webkit-tap-highlight-color: transparent;
         }
-        
         .btn-white::before {
             content: '';
             position: absolute;
@@ -783,16 +682,13 @@
             transition: transform var(--transition-speed) ease;
             z-index: -1;
         }
-        
         .btn-white:hover::before {
             transform: translateX(0);
         }
-        
         .btn-white:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
-        
         /* Footer */
         footer {
             background-color: var(--text-dark);
@@ -800,7 +696,6 @@
             padding: 40px 0;
             text-align: center;
         }
-        
         .slogan {
             font-size: 22px;
             font-weight: 600;
@@ -809,7 +704,6 @@
             position: relative;
             display: inline-block;
         }
-        
         .slogan::after {
             content: '';
             position: absolute;
@@ -819,22 +713,18 @@
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
         }
-        
         .footer-contact {
             margin-top: 20px;
         }
-        
         .footer-contact a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             transition: color var(--transition-speed) ease;
         }
-        
         .footer-contact a:hover {
             color: var(--primary-blue);
         }
-        
         /* QR Modal */
         .qr-modal {
             display: none;
@@ -850,12 +740,10 @@
             padding: 20px;
             backdrop-filter: blur(5px);
         }
-        
         .qr-modal.active {
             display: flex;
             animation: fadeIn 0.3s ease;
         }
-        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -864,7 +752,6 @@
                 opacity: 1;
             }
         }
-        
         .qr-modal-content {
             background-color: white;
             border-radius: 20px;
@@ -877,7 +764,6 @@
             animation: slideUp 0.4s ease;
             overflow: hidden;
         }
-        
         @keyframes slideUp {
             from {
                 opacity: 0;
@@ -888,7 +774,6 @@
                 transform: translateY(0);
             }
         }
-        
         .qr-modal-close {
             position: absolute;
             top: 15px;
@@ -907,12 +792,10 @@
             justify-content: center;
             -webkit-tap-highlight-color: transparent;
         }
-        
         .qr-modal-close:hover {
             color: var(--text-dark);
             background-color: var(--bg-light);
         }
-        
         .qr-modal-image-container {
             margin: 25px 0;
             display: flex;
@@ -925,27 +808,23 @@
             position: relative;
             min-height: 250px;
         }
-        
         .qr-code-image {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
         .qr-modal-title {
             font-size: 22px;
             font-weight: 600;
             color: var(--primary-purple);
             margin-bottom: 10px;
         }
-        
         .qr-modal-description {
             color: var(--text-light);
             margin-bottom: 15px;
             font-size: 16px;
         }
-        
         .qr-modal-upi {
             font-weight: 600;
             color: var(--primary-blue);
@@ -956,7 +835,6 @@
             border-radius: 20px;
             display: inline-block;
         }
-        
         .qr-modal-instructions {
             font-size: 14px;
             color: var(--text-light);
@@ -967,7 +845,6 @@
             border-left: 3px solid var(--primary-purple);
             text-align: left;
         }
-        
         /* Fallback for QR code */
         .qr-fallback {
             display: flex;
@@ -975,14 +852,12 @@
             align-items: center;
             justify-content: center;
         }
-        
         .qr-fallback-icon {
             font-size: 80px;
             color: var(--primary-purple);
             margin-bottom: 20px;
             animation: pulse 2s infinite;
         }
-        
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -994,21 +869,18 @@
                 transform: scale(1);
             }
         }
-        
         .qr-fallback-text {
             font-size: 18px;
             color: var(--text-dark);
             margin-bottom: 10px;
             font-weight: 600;
         }
-        
         .qr-fallback-upi {
             font-size: 16px;
             color: var(--primary-blue);
             margin-bottom: 15px;
             font-weight: 500;
         }
-        
         /* Mobile-first responsive adjustments */
         @media (max-width: 480px) {
             :root {
@@ -1016,156 +888,122 @@
                 --card-border-radius: 12px;
                 --mobile-padding: 12px;
             }
-            
             .container {
                 padding: 0 var(--mobile-padding);
             }
-            
             .hero h1 {
                 font-size: 24px;
             }
-            
             .hero h2 {
                 font-size: 16px;
             }
-            
             .section-title {
                 font-size: 20px;
                 margin-bottom: 15px;
             }
-            
             .feature-list {
                 grid-template-columns: 1fr;
                 gap: 15px;
             }
-            
             .feature-item {
                 padding: 20px 15px;
             }
-            
             .pricing-cards {
                 flex-direction: column;
                 align-items: center;
             }
-            
             .pricing-card {
                 max-width: 100%;
                 padding: 25px 20px;
                 margin-bottom: 20px;
             }
-            
             .pricing-card.featured {
                 transform: scale(1);
             }
-            
             .pricing-card.featured::after {
                 right: -30px;
                 padding: 3px 35px;
                 font-size: 11px;
             }
-            
             .comparison-table {
                 font-size: 13px;
             }
-            
             .comparison-table th, .comparison-table td {
                 padding: 12px 10px;
             }
-            
             .app-features {
                 grid-template-columns: 1fr 1fr;
                 gap: 15px;
             }
-            
             .vision-points {
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
             }
-            
             .vision-point {
                 max-width: 100%;
                 padding: 20px 15px;
             }
-            
             .qr-modal-content {
                 padding: 25px 20px;
             }
-            
             .qr-modal-title {
                 font-size: 20px;
             }
-            
             .qr-modal-image-container {
                 min-height: 220px;
                 padding: 20px;
             }
-            
             .cta {
                 padding: 60px 0;
             }
-            
             .cta h2 {
                 font-size: 24px;
             }
-            
             .slogan {
                 font-size: 20px;
             }
-            
             .btn-primary, .btn-white {
                 padding: 12px 24px;
                 font-size: 16px;
             }
         }
-        
         /* Tablet and larger screens */
         @media (min-width: 768px) {
             :root {
                 --mobile-padding: 15px;
             }
-            
             .hero h1 {
                 font-size: 32px;
             }
-            
             .hero h2 {
                 font-size: 20px;
             }
-            
             .section-title {
                 font-size: 26px;
             }
-            
             .feature-list {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
             .testimonial-cards {
                 grid-template-columns: 1fr 1fr;
             }
-            
             .app-features {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
             .vision-points {
                 gap: 30px;
             }
-            
             .vision-point {
                 width: 220px;
             }
-            
             .qr-modal-content {
                 max-width: 450px;
             }
-            
             .qr-modal-image-container {
                 min-height: 280px;
             }
         }
-        
         /* Desktop and larger screens */
         @media (min-width: 992px) {
             :root {
@@ -1173,94 +1011,75 @@
                 --card-border-radius: 15px;
                 --mobile-padding: 15px;
             }
-            
             .logo {
                 font-size: 28px;
             }
-            
             .logo-icon {
                 width: 50px;
                 height: 50px;
                 margin-right: 15px;
             }
-            
             .hero {
                 padding: 100px 0;
             }
-            
             .hero h1 {
                 font-size: 42px;
             }
-            
             .hero h2 {
                 font-size: 24px;
             }
-            
             .section-title {
                 font-size: 32px;
                 margin-bottom: 25px;
                 padding-bottom: 20px;
             }
-            
             .section-title::after {
                 width: 80px;
             }
-            
             .feature-list {
                 grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
                 gap: 30px;
                 margin-top: 50px;
             }
-            
             .feature-item {
                 padding: 30px 25px;
             }
-            
             .feature-item i {
                 font-size: 42px;
                 margin-bottom: 20px;
             }
-            
             .feature-item h3 {
                 font-size: 22px;
                 margin-bottom: 12px;
             }
-            
             .feature-item p {
                 font-size: 16px;
             }
-            
             .pricing-cards {
                 gap: 40px;
                 margin-top: 50px;
                 justify-content: center;
             }
-            
             .pricing-card {
                 padding: 40px 30px;
                 max-width: 350px;
             }
-            
             .pricing-card h3 {
                 font-size: 26px;
                 margin-bottom: 20px;
             }
-            
             .pricing-card .price {
                 font-size: 48px;
                 margin-bottom: 25px;
             }
-            
             .pricing-card .price span {
                 font-size: 20px;
             }
-            
             .pricing-card ul {
                 margin-bottom: 35px;
                 padding-left: 0;
                 text-align: center;
             }
-            
             .pricing-card ul li {
                 padding: 12px 0;
                 font-size: 16px;
@@ -1268,86 +1087,68 @@
                 text-align: center;
                 padding-left: 0;
             }
-            
             .pricing-card ul li::before {
                 display: none;
             }
-            
             .testimonial-cards {
                 gap: 40px;
                 margin-top: 50px;
             }
-            
             .testimonial-card {
                 padding: 30px;
             }
-            
             .testimonial-card p {
                 font-size: 18px;
                 margin-bottom: 25px;
                 padding-left: 25px;
             }
-            
             .testimonial-card .author {
                 font-size: 16px;
             }
-            
             .comparison-table {
                 max-width: 800px;
                 margin: 50px auto 0;
                 font-size: 16px;
             }
-            
             .comparison-table th, .comparison-table td {
                 padding: 18px 20px;
             }
-            
             .faq-list {
                 max-width: 800px;
                 margin: 50px auto 0;
             }
-            
             .faq-item {
                 margin-bottom: 20px;
             }
-            
             .faq-question {
                 padding: 25px;
                 font-size: 18px;
             }
-            
             .faq-item.active .faq-answer {
                 padding: 0 25px 25px;
             }
-            
             .faq-answer p {
                 font-size: 16px;
             }
-            
             .app-features {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 30px;
                 margin-top: 50px;
             }
-            
             .app-feature {
                 padding: 30px 25px;
             }
-            
             .app-feature i {
                 font-size: 42px;
                 margin-bottom: 20px;
             }
-            
             .app-feature h4 {
                 font-size: 22px;
                 margin-bottom: 12px;
             }
-            
             .app-feature p {
                 font-size: 16px;
             }
-            
             .phone-mockup {
                 width: 280px;
                 height: 560px;
@@ -1355,93 +1156,74 @@
                 border: 12px solid #333;
                 margin: 50px auto;
             }
-            
             .phone-mockup::after {
                 font-size: 28px;
             }
-            
             .vision-points {
                 gap: 40px;
                 margin-top: 50px;
             }
-            
             .vision-point {
                 padding: 30px 25px;
                 width: 280px;
             }
-            
             .vision-point i {
                 font-size: 42px;
                 margin-bottom: 20px;
             }
-            
             .vision-point h4 {
                 font-size: 22px;
                 margin-bottom: 12px;
             }
-            
             .vision-point p {
                 font-size: 16px;
             }
-            
             .cta {
                 padding: 100px 0;
             }
-            
             .cta h2 {
                 font-size: 36px;
                 margin-bottom: 25px;
             }
-            
             .cta p {
                 font-size: 20px;
                 margin-bottom: 35px;
                 max-width: 700px;
             }
-            
             .slogan {
                 font-size: 26px;
                 margin-bottom: 25px;
             }
-            
             .footer-contact {
                 margin-top: 25px;
             }
-            
             .footer-contact a {
                 font-size: 18px;
             }
-            
             .qr-modal-content {
                 max-width: 500px;
                 padding: 40px 30px;
             }
-            
             .qr-modal-title {
                 font-size: 26px;
             }
-            
             .qr-modal-image-container {
                 min-height: 320px;
                 padding: 30px;
             }
         }
-        
         /* Smooth scrolling for the entire page */
         html {
             scroll-behavior: smooth;
         }
-        
         /* Add smooth transitions to all elements */
         * {
             transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
         }
-        
         /* Improved touch scrolling for mobile */
         body {
             -webkit-overflow-scrolling: touch;
         }
-        
         /* Make sure sections don't collapse on mobile */
         section {
             min-height: 60vh;
@@ -1449,14 +1231,12 @@
             flex-direction: column;
             justify-content: center;
         }
-        
         /* Add some spacing between elements on mobile */
         @media (max-width: 768px) {
             .feature-item, .app-feature, .vision-point {
                 margin-bottom: 20px;
             }
         }
-        
         /* Make buttons more accessible on mobile */
         @media (max-width: 768px) {
             .btn-primary, .btn-white {
@@ -1464,93 +1244,77 @@
                 font-size: 18px;
             }
         }
-        
         /* Make text more readable on mobile */
         @media (max-width: 768px) {
             body {
                 font-size: 16px;
             }
-            
             h1, h2, h3, h4, h5, h6 {
                 line-height: 1.3;
             }
-            
             p {
                 line-height: 1.6;
             }
         }
-        
         /* Ensure consistent card heights */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-        
         .card-grid > * {
             height: 100%;
             display: flex;
             flex-direction: column;
         }
-        
         /* Fix for iOS Safari viewport issues */
         @supports (-webkit-touch-callout: none) {
             .container {
                 padding: 0 calc(var(--mobile-padding) + env(safe-area-inset-right)) 0 calc(var(--mobile-padding) + env(safe-area-inset-left));
             }
         }
-        
         /* Fix for potential horizontal scroll on mobile */
         img, table, video {
             max-width: 100%;
             height: auto;
         }
-        
         /* Fix for potential text overflow */
         h1, h2, h3, h4, h5, h6, p, li {
             overflow-wrap: break-word;
             word-wrap: break-word;
             hyphens: auto;
         }
-        
         /* Fix for potential z-index issues */
         .pricing-card.featured {
             z-index: 1;
         }
-        
         /* Fix for potential animation issues */
         .feature-item, .app-feature, .vision-point, .testimonial-card, .pricing-card {
             will-change: transform;
         }
-        
         /* Fix for potential focus issues on mobile */
         button:focus, a:focus, input:focus, textarea:focus {
             outline: 2px solid var(--primary-blue);
             outline-offset: 2px;
         }
-        
         /* Fix for potential button spacing issues */
         .btn-primary, .btn-white {
             white-space: nowrap;
         }
-        
         /* Fix for potential card alignment issues */
         .feature-item, .app-feature, .vision-point {
             text-align: center;
         }
-        
         /* Fix for potential image loading issues */
         img {
             display: block;
         }
-        
         /* Fix for potential table overflow issues */
         .comparison-table-wrapper {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             margin-bottom: 1rem;
         }
-        
         /* Fix for potential modal display issues */
         .qr-modal {
             position: fixed;
@@ -1560,13 +1324,11 @@
             bottom: 0;
             z-index: 9999;
         }
-        
         /* Fix for potential sticky header issues */
         header {
             position: -webkit-sticky;
             position: sticky;
         }
-        
         /* Android-specific fixes */
         @media screen and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-min-device-pixel-ratio: 2.0) {
             /* Fix for blurry text on high-resolution Android devices */
@@ -1575,14 +1337,12 @@
                 -moz-osx-font-smoothing: grayscale;
                 text-rendering: optimizeLegibility;
             }
-            
             /* Fix for button rendering issues on Android */
             .btn-primary, .btn-white {
                 -webkit-transform: translateZ(0);
                 transform: translateZ(0);
             }
         }
-        
         /* Fix for Android Chrome rendering issues */
         @media screen and (-webkit-min-device-pixel-ratio: 1.5) {
             /* Force hardware acceleration */
@@ -1593,33 +1353,28 @@
                 backface-visibility: hidden;
             }
         }
-        
         /* Fix for Android button tap highlight */
         .btn-primary, .btn-white, .faq-question, .qr-modal-close {
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             -webkit-tap-highlight-color: transparent;
         }
-        
         /* Fix for Android viewport issues */
         @viewport {
             width: device-width;
             initial-scale: 1.0;
-            maximum-scale: 5.0;
-            user-scalable: yes;
+            maximum-scale: 1.0;
+            user-scalable: 0;
         }
-        
         /* Fix for Android font rendering */
         body {
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
-        
         /* Fix for Android scrolling issues */
         body {
             overflow-y: scroll;
             -webkit-overflow-scrolling: touch;
         }
-        
         /* Fix for Android input focus issues */
         input, textarea, button {
             -webkit-appearance: none;
@@ -1627,7 +1382,6 @@
             appearance: none;
             border-radius: 0;
         }
-        
         /* Fix for Android animation performance */
         .feature-item, .app-feature, .vision-point, .testimonial-card, .pricing-card {
             -webkit-transform: translateZ(0);
@@ -1637,14 +1391,12 @@
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
         }
-        
         /* Fix for Android card hover issues */
         @media (hover: none) {
             .feature-item:hover, .app-feature:hover, .vision-point:hover, .testimonial-card:hover, .pricing-card:hover {
                 transform: none;
             }
         }
-        
         /* Fix for Android modal display */
         @media (max-width: 480px) {
             .qr-modal-content {
@@ -1652,42 +1404,6 @@
                 max-width: calc(100% - 40px);
                 border-radius: 12px;
             }
-        }
-        
-        /* Critical fix for scrolling issues on mobile */
-        .scroll-container {
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            position: relative;
-        }
-        
-        /* Fix for position fixed/absolute issues on mobile */
-        .fixed-element {
-            position: fixed;
-            z-index: 100;
-        }
-        
-        /* Fix for potential flexbox issues on mobile */
-        .flex-container {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        /* Fix for potential height calculation issues */
-        .full-height {
-            height: 100%;
-        }
-        
-        /* Fix for potential width calculation issues */
-        .full-width {
-            width: 100%;
-        }
-        
-        /* Fix for potential touch event issues */
-        .touch-target {
-            min-height: 48px;
-            min-width: 48px;
         }
     </style>
 </head>
@@ -1705,7 +1421,6 @@
                         <line x1="30" y1="45" x2="40" y2="45" stroke="#6C63FF" stroke-width="1"></line>
                         <line x1="30" y1="55" x2="40" y2="55" stroke="#6C63FF" stroke-width="1"></line>
                         <line x1="30" y1="65" x2="40" y2="65" stroke="#6C63FF" stroke-width="1"></line>
-                        
                         <!-- Brain/AI circuit (right side) -->
                         <path d="M50,20 L50,80 L80,80 L80,20 Z" fill="#f0f0f0" stroke="#40BFFF" stroke-width="2"></path>
                         <circle cx="60" cy="30" r="3" fill="#40BFFF"></circle>
@@ -1726,7 +1441,6 @@
             </div>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -1735,10 +1449,9 @@
             <p>Right now: <span class="highlight">FY (Semester 1 &amp; 2) complete notes package</span> 📝</p>
             <p>Coming soon: <span class="coming-soon">SY &amp; TY semester notes</span> 🚀</p>
             <p>Stop searching everywhere — start studying smarter today.</p>
-            <a href="mailto:r3h7sayyed@gmail.com?subject=Request%20for%20TutorIQ%20SPPU%20FY%20Notes%20Demo" class="btn-primary">Get Demo Notes Now</a>
+            <button class="btn-primary get-demo-btn" data-email="r3h7sayyed@gmail.com" data-subject="Request for TutorIQ SPPU FY Notes Demo">Get Demo Notes Now</button>
         </div>
     </section>
-
     <!-- Target Audience Section -->
     <section class="target">
         <div class="container">
@@ -1750,7 +1463,6 @@
             </p>
         </div>
     </section>
-
     <!-- Features Section -->
     <section class="features">
         <div class="container">
@@ -1769,7 +1481,7 @@
                 <div class="feature-item purple">
                     <i class="fas fa-clipboard-list"></i>
                     <h3>Question Banks</h3>
-                    <p>To practice and perfect</p>
+                    <p>To practice and become perfect</p>
                 </div>
                 <div class="feature-item blue">
                     <i class="fas fa-flask"></i>
@@ -1784,7 +1496,6 @@
             </div>
         </div>
     </section>
-
     <!-- Pricing Section -->
     <section class="pricing">
         <div class="container">
@@ -1818,7 +1529,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
@@ -1836,7 +1546,6 @@
             <p style="text-align: center; margin-top: 30px; font-weight: 500;">👉 Trusted. Tested. Loved by students like you.</p>
         </div>
     </section>
-
     <!-- Demo Section -->
     <section class="demo">
         <div class="container">
@@ -1846,11 +1555,10 @@
                 Click below to get a <strong>free demo sample of SPPU BSc CS FY Notes</strong>.
             </p>
             <div style="text-align: center;">
-                <a href="mailto:r3h7sayyed@gmail.com?subject=Request%20for%20TutorIQ%20SPPU%20FY%20Notes%20Demo" class="btn-primary">Get Demo Notes Here</a>
+                <button class="btn-primary get-demo-btn" data-email="r3h7sayyed@gmail.com" data-subject="Request for TutorIQ SPPU FY Notes Demo">Get Demo Notes Here</button>
             </div>
         </div>
     </section>
-
     <!-- Comparison Section -->
     <section class="comparison">
         <div class="container">
@@ -1886,7 +1594,6 @@
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section class="faq">
         <div class="container">
@@ -1916,13 +1623,12 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>A: Yes! Demo notes are <strong>free</strong>. Click on the "Get Demo Notes Here"</p>
+                        <p>A: Yes! Demo notes are <strong class="">free</strong>. Click on the "Get Demo Notes Here"</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- App Preview Section -->
     <section class="app-preview">
         <div class="container">
@@ -1955,7 +1661,6 @@
             </div>
         </div>
     </section>
-
     <!-- Vision Section -->
     <section class="vision">
         <div class="container">
@@ -1986,7 +1691,6 @@
             </p>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
@@ -1995,13 +1699,12 @@
                 Grab your <strong>SPPU BSc CS FY Notes (SEM 1 &amp; SEM 2)</strong> today<br>
                 Stay tuned for <strong>SY, TY notes, and the AI App</strong> launching soon!
             </p>
-            <a href="mailto:r3h7sayyed@gmail.com?subject=Request%20for%20TutorIQ%20SPPU%20FY%20Notes%20Demo" class="btn-white">Get Demo Notes Here</a>
+            <button class="btn-white get-demo-btn" data-email="r3h7sayyed@gmail.com" data-subject="Request for TutorIQ SPPU FY Notes Demo">Get Demo Notes Here</button>
             <div class="footer-contact" style="margin-top: 30px;">
                 <p>📩 Email: <strong>r3h7sayyed@gmail.com</strong> to get started.</p>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -2009,7 +1712,6 @@
             <p>© 2025 TutorIQ. All rights reserved.<div><span style="color: rgb(156, 163, 175); font-family: ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; background-color: rgb(17, 24, 39);">Made with ❤️ for SPPU BSc CS Students</span></div></p>
         </div>
     </footer>
-
     <!-- QR Code Modal -->
     <div class="qr-modal" id="qrModal">
         <div class="qr-modal-content">
@@ -2017,11 +1719,9 @@
             <h3 class="qr-modal-title" id="qrModalTitle">Complete Your Payment</h3>
             <p class="qr-modal-description" id="qrModalDescription">Scan the QR code below to pay</p>
             <div class="qr-modal-upi" id="qrModalUPI">UPI ID: rehansayyed2006@okaxis</div>
-            
             <div class="qr-modal-image-container">
                 <!-- Primary QR Code Image -->
-                <img id="primaryQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=rehansayyed2006@okaxis&pn=TutorIQ&tn=Notes%20Payment" alt="Payment QR Code" class="qr-code-image" style="display: block;">
-                
+                <img id="primaryQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&amp;data=upi://pay?pa=rehansayyed2006@okaxis&amp;pn=TutorIQ&amp;tn=Notes%20Payment" alt="Payment QR Code" class="qr-code-image" style="display: block;">
                 <!-- Fallback if primary image fails to load -->
                 <div id="qrFallback" class="qr-fallback" style="display: none;">
                     <i class="fas fa-qrcode qr-fallback-icon"></i>
@@ -2029,19 +1729,15 @@
                     <div class="qr-fallback-upi">rehansayyed2006@okaxis</div>
                 </div>
             </div>
-            
             <p class="qr-modal-instructions">After payment, send a screenshot to r3h7sayyed@gmail.com with your selected plan to receive your notes.</p>
         </div>
     </div>
-
     <script>
         // FAQ Accordion
         document.addEventListener('DOMContentLoaded', function() {
             const faqItems = document.querySelectorAll('.faq-item');
-            
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
-                
                 question.addEventListener('click', () => {
                     // Close all other items
                     faqItems.forEach(otherItem => {
@@ -2049,25 +1745,28 @@
                             otherItem.classList.remove('active');
                         }
                     });
-                    
                     // Toggle current item
                     item.classList.toggle('active');
                 });
-                
-                // Add touch support for mobile devices
-                question.addEventListener('touchstart', (e) => {
-                    e.preventDefault(); // Prevent default to avoid double firing with click event
+            });
+            
+            // Get all "Get Demo" buttons
+            const getDemoButtons = document.querySelectorAll('.get-demo-btn');
+            
+            // Add click event to each button
+            getDemoButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const email = this.getAttribute('data-email');
+                    const subject = this.getAttribute('data-subject');
                     
-                    // Close all other items
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('active')) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current item
-                    item.classList.toggle('active');
-                }, { passive: false });
+                    // Show alert with instructions for mobile users
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                        alert('To get your demo notes, please email us at: ' + email + '\n\nSubject: ' + subject + '\n\nYou can copy this email address and subject, then open your email app to send the request.');
+                    } else {
+                        // For desktop, open mailto link
+                        window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject);
+                    }
+                });
             });
             
             // QR Modal functionality
@@ -2114,35 +1813,6 @@
                         document.querySelector('.qr-modal-content').style.animation = 'slideUp 0.4s ease';
                     }, 10);
                 });
-                
-                // Add touch support for mobile devices
-                button.addEventListener('touchstart', function(e) {
-                    e.preventDefault(); // Prevent default to avoid double firing with click event
-                    
-                    const price = this.getAttribute('data-price');
-                    const plan = this.getAttribute('data-plan');
-                    
-                    // Update modal content based on selected plan
-                    qrModalTitle.textContent = `Complete Your Payment - ${plan}`;
-                    qrModalDescription.textContent = `Scan the QR code below to pay ₹${price}`;
-                    
-                    // Update QR code with specific amount
-                    const qrData = `upi://pay?pa=rehansayyed2006@okaxis&pn=TutorIQ&am=${price}&tn=${plan}%20Payment`;
-                    primaryQrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
-                    
-                    // Reset fallback visibility
-                    primaryQrCode.style.display = 'block';
-                    qrFallback.style.display = 'none';
-                    
-                    // Show the modal
-                    qrModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-                    
-                    // Add animation to modal
-                    setTimeout(() => {
-                        document.querySelector('.qr-modal-content').style.animation = 'slideUp 0.4s ease';
-                    }, 10);
-                }, { passive: false });
             });
             
             // Close modal when clicking the X button
@@ -2150,13 +1820,6 @@
                 qrModal.classList.remove('active');
                 document.body.style.overflow = ''; // Restore scrolling
             });
-            
-            // Add touch support for modal close button
-            qrModalClose.addEventListener('touchstart', function(e) {
-                e.preventDefault(); // Prevent default to avoid double firing with click event
-                qrModal.classList.remove('active');
-                document.body.style.overflow = ''; // Restore scrolling
-            }, { passive: false });
             
             // Close modal when clicking outside of it
             window.addEventListener('click', function(event) {
@@ -2178,7 +1841,6 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
                         target.scrollIntoView({
@@ -2191,55 +1853,35 @@
             
             // Add scroll reveal animations
             const revealElements = document.querySelectorAll('section');
-            
             function revealOnScroll() {
                 for (let i = 0; i < revealElements.length; i++) {
                     const windowHeight = window.innerHeight;
                     const elementTop = revealElements[i].getBoundingClientRect().top;
                     const elementVisible = 150;
-                    
                     if (elementTop < windowHeight - elementVisible) {
                         revealElements[i].classList.add('revealed');
                     }
                 }
             }
-            
             window.addEventListener('scroll', revealOnScroll);
             revealOnScroll(); // Check on initial load
-        });
-        
-        // Fix for critical scrolling issues on mobile
-        document.addEventListener('touchmove', function(event) {
-            // Only prevent pinch to zoom which can cause scrolling issues
-            if (event.scale !== 1) {
-                event.preventDefault();
-            }
-        }, { passive: false });
-        
-        // Fix for potential scrolling container issues
-        function ensureScrollingWorks() {
-            // Check if body is scrollable
-            const body = document.body;
-            const html = document.documentElement;
             
-            // If content height is greater than viewport height, ensure scrolling is enabled
-            if (body.scrollHeight > body.clientHeight || html.scrollHeight > html.clientHeight) {
-                body.style.overflowY = 'auto';
-                html.style.overflowY = 'auto';
-                
-                // Ensure touch scrolling works
-                body.style.webkitOverflowScrolling = 'touch';
-                html.style.webkitOverflowScrolling = 'touch';
-            }
-        }
-        
-        // Call the function on load and resize
-        window.addEventListener('load', ensureScrollingWorks);
-        window.addEventListener('resize', ensureScrollingWorks);
-        
-        // Add loading animation
-        window.addEventListener('load', function() {
-            document.body.classList.add('loaded');
+            // Fix for mobile scrolling - ensure touch events don't interfere
+            document.addEventListener('touchmove', function(event) {
+                // Allow vertical scrolling
+                if (event.touches.length === 1) {
+                    const touch = event.touches[0];
+                    const target = event.target;
+                    
+                    // Check if we're interacting with something that should handle touch (like a button)
+                    if (target.closest('button, .btn-primary, .btn-white, .faq-question, .qr-modal-close')) {
+                        return;
+                    }
+                    
+                    // Allow scrolling
+                    return;
+                }
+            }, { passive: true });
         });
         
         // Fix for Android back button behavior
@@ -2249,21 +1891,23 @@
             if (qrModal.classList.contains('active')) {
                 qrModal.classList.remove('active');
                 document.body.style.overflow = ''; // Restore scrolling
-                event.preventDefault(); // Prevent default back button behavior
-                window.history.pushState(null, null, window.location.href); // Push new state to history
+                event.preventDefault();
+                window.history.pushState(null, null, window.location.href);
             }
         });
         
         // Initialize history state for Android back button
-        window.history.pushState(null, null, window.location.href);
+        if (window.history && window.history.pushState) {
+            window.history.pushState(null, null, window.location.href);
+        }
         
-        // Fix for email links on mobile
-        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-            link.addEventListener('click', function(e) {
-                // Let the default behavior happen for mailto links
-                return true;
-            });
-        });
+        // Ensure mobile viewport is properly configured
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            let viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport) {
+                viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes');
+            }
+        }
     </script>
-
-</body></html>
+</body>
+</html>
