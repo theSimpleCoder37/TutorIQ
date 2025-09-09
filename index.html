@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#6C63FF">
+    <meta name="theme-color" content="#D2B48C"> <!-- Coffee theme color -->
     <meta name="description" content="TutorIQ - SPPU BSc CS Notes Made Simple. Get exam-focused notes for FY Semester 1 & 2. Affordable, comprehensive, and student-friendly.">
     <title>TutorIQ - Where Procrastinators Get Ahead</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@400;700&family=Handlee&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-purple: #6C63FF;
-            --primary-blue: #40BFFF;
-            --text-dark: #333;
-            --text-light: #555;
+            --primary-purple: #8B4513; /* SaddleBrown - Coffee theme */
+            --primary-blue: #A0522D; /* Sienna - Coffee theme */
+            --text-dark: #3E2723; /* Darker brown for text */
+            --text-light: #5D4037; /* Brown for lighter text */
+            --bg-main: #F5F1E6; /* Light cream - Coffee theme */
             --bg-light: #f8f9fa;
             --border-color: #e9ecef;
             --section-padding: 60px 0;
@@ -23,6 +24,10 @@
             --card-border-radius: 16px;
             --transition-speed: 0.3s;
             --mobile-padding: 16px;
+            --coffee-beige: #F5F1E6;
+            --coffee-brown: #A0522D;
+            --coffee-dark: #8B4513;
+            --coffee-accent: #D2B48C; /* Tan - Coffee accent */
         }
         * {
             margin: 0;
@@ -37,8 +42,8 @@
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #fff;
+            line-height: 1.7;
+            background-color: var(--bg-main);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -85,6 +90,7 @@
         .logo-text {
             display: flex;
             align-items: center;
+            font-family: 'Handlee', cursive; /* Handwritten style */
         }
         .logo-text .tutor {
             color: var(--primary-purple);
@@ -107,7 +113,7 @@
         /* Hero Section */
         .hero {
             padding: var(--section-padding);
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(64, 191, 255, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
             text-align: center;
         }
         .hero h1 {
@@ -115,6 +121,7 @@
             margin-bottom: 12px;
             color: var(--text-dark);
             font-weight: 600;
+            font-family: 'Playfair Display', serif;
         }
         .hero h2 {
             font-size: 18px;
@@ -140,7 +147,7 @@
             font-weight: 500;
             margin-top: 20px;
             transition: all var(--transition-speed) ease;
-            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
             font-size: 16px;
             cursor: pointer;
             border: none;
@@ -166,9 +173,9 @@
             transform: translateX(0);
         }
         .btn-primary:hover {
-            background: #5a52e0;
+            background: #7a3d10; /* Darker shade for hover */
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.4);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
         }
         /* Section Styling */
         section {
@@ -181,6 +188,8 @@
             text-align: center;
             position: relative;
             padding-bottom: 15px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
         }
         .section-title::after {
             content: '';
@@ -247,7 +256,7 @@
         }
         /* Pricing Section */
         .pricing {
-            background-color: white;
+            background-color: var(--bg-main);
         }
         .pricing-cards {
             display: flex;
@@ -312,6 +321,7 @@
             margin-bottom: 15px;
             color: var(--text-dark);
             font-weight: 600;
+            font-family: 'Playfair Display', serif;
         }
         .pricing-card .price {
             font-size: 36px;
@@ -349,6 +359,8 @@
             font-size: 14px;
             position: relative;
             padding-left: 25px;
+            display: flex;
+            align-items: center;
         }
         .pricing-card ul li::before {
             content: "✓";
@@ -357,6 +369,7 @@
             position: absolute;
             left: 0;
             top: 10px;
+            font-size: 14px;
         }
         .pricing-card ul li:last-child {
             border-bottom: none;
@@ -390,7 +403,7 @@
             top: 10px;
             left: 15px;
             font-size: 60px;
-            color: rgba(108, 99, 255, 0.1);
+            color: rgba(139, 69, 19, 0.1);
             font-family: Georgia, serif;
             line-height: 1;
         }
@@ -411,7 +424,7 @@
         }
         /* Comparison Section */
         .comparison {
-            background-color: white;
+            background-color: var(--bg-main);
         }
         .comparison-table {
             width: 100%;
@@ -438,7 +451,7 @@
             border-bottom: none;
         }
         .comparison-table tr:nth-child(even) {
-            background-color: rgba(108, 99, 255, 0.03);
+            background-color: rgba(139, 69, 19, 0.03);
         }
         .comparison-table .highlight {
             color: var(--primary-purple);
@@ -475,7 +488,7 @@
             -webkit-tap-highlight-color: transparent;
         }
         .faq-question:hover {
-            background-color: rgba(108, 99, 255, 0.05);
+            background-color: rgba(139, 69, 19, 0.05);
         }
         .faq-question i {
             color: var(--primary-purple);
@@ -487,7 +500,7 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
-            background-color: rgba(108, 99, 255, 0.02);
+            background-color: rgba(139, 69, 19, 0.02);
         }
         .faq-item.active .faq-answer {
             padding: 0 20px 20px;
@@ -502,7 +515,7 @@
         }
         /* App Preview Section */
         .app-preview {
-            background-color: white;
+            background-color: var(--bg-main);
         }
         .app-features {
             display: grid;
@@ -567,7 +580,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.2) 0%, rgba(64, 191, 255, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.2) 0%, rgba(160, 82, 45, 0.2) 100%);
             z-index: 1;
         }
         .phone-mockup::after {
@@ -584,7 +597,7 @@
         }
         /* Vision Section */
         .vision {
-            background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(64, 191, 255, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05) 0%, rgba(160, 82, 45, 0.05) 100%);
             text-align: center;
         }
         .vision-points {
@@ -647,7 +660,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIvPjwvcGF0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
             opacity: 0.1;
         }
         .cta h2 {
@@ -690,7 +703,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(108, 99, 255, 0.1);
+            background: rgba(139, 69, 19, 0.1);
             transform: translateX(-100%);
             transition: transform var(--transition-speed) ease;
             z-index: -1;
@@ -716,6 +729,7 @@
             color: white;
             position: relative;
             display: inline-block;
+            font-family: 'Patrick Hand', cursive; /* Handwritten style */
         }
         .slogan::after {
             content: '';
@@ -830,7 +844,7 @@
             margin-bottom: 20px;
             font-size: 16px;
             padding: 8px 15px;
-            background-color: rgba(64, 191, 255, 0.1);
+            background-color: rgba(160, 82, 45, 0.1);
             border-radius: 20px;
             display: inline-block;
             word-break: break-all;
@@ -882,7 +896,7 @@
             margin: 15px 0;
             font-size: 18px;
             padding: 12px 20px;
-            background-color: rgba(108, 99, 255, 0.1);
+            background-color: rgba(139, 69, 19, 0.1);
             border-radius: 12px;
             display: inline-block;
             word-break: break-all;
@@ -890,7 +904,7 @@
             transition: all 0.3s ease;
         }
         .demo-email:hover {
-            background-color: rgba(108, 99, 255, 0.2);
+            background-color: rgba(139, 69, 19, 0.2);
             transform: translateY(-2px);
         }
         .copy-btn {
@@ -906,7 +920,7 @@
             font-size: 14px;
         }
         .copy-btn:hover {
-            background: #5a52e0;
+            background: #7a3d10;
             transform: translateY(-2px);
         }
         .copy-success {
@@ -943,9 +957,11 @@
             }
             .hero h1 {
                 font-size: 22px;
+                line-height: 1.3; /* Added line-height for better spacing */
             }
             .hero h2 {
                 font-size: 16px;
+                line-height: 1.4; /* Added line-height for better spacing */
             }
             .section-title {
                 font-size: 20px;
@@ -1082,6 +1098,14 @@
             .copy-btn {
                 padding: 8px 16px;
                 font-size: 13px;
+            }
+            /* Specific fix for emoji overlap on small screens */
+            .hero p, .hero h1, .hero h2 {
+                word-break: break-word; /* Ensures long words break correctly */
+                hyphens: auto; /* Adds hyphens where appropriate */
+            }
+            .hero p span {
+                display: inline-block; /* Prevents emojis from wrapping oddly */
             }
         }
         /* Tablet and larger screens */
@@ -1444,7 +1468,7 @@
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #5a52e0;
+            background: #7a3d10;
         }
         /* Add subtle animation to section entrances */
         section {
@@ -1551,24 +1575,24 @@
                 <div class="logo-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                         <!-- Book pages (left side) -->
-                        <path d="M20,20 L20,80 L50,80 L50,20 Z" fill="#f0f0f0" stroke="#6C63FF" stroke-width="2"></path>
-                        <path d="M25,25 L25,75 L45,75 L45,25 Z" fill="#ffffff" stroke="#6C63FF" stroke-width="1"></path>
-                        <line x1="30" y1="35" x2="40" y2="35" stroke="#6C63FF" stroke-width="1"></line>
-                        <line x1="30" y1="45" x2="40" y2="45" stroke="#6C63FF" stroke-width="1"></line>
-                        <line x1="30" y1="55" x2="40" y2="55" stroke="#6C63FF" stroke-width="1"></line>
-                        <line x1="30" y1="65" x2="40" y2="65" stroke="#6C63FF" stroke-width="1"></line>
+                        <path d="M20,20 L20,80 L50,80 L50,20 Z" fill="#f0f0f0" stroke="#8B4513" stroke-width="2"></path>
+                        <path d="M25,25 L25,75 L45,75 L45,25 Z" fill="#ffffff" stroke="#8B4513" stroke-width="1"></path>
+                        <line x1="30" y1="35" x2="40" y2="35" stroke="#8B4513" stroke-width="1"></line>
+                        <line x1="30" y1="45" x2="40" y2="45" stroke="#8B4513" stroke-width="1"></line>
+                        <line x1="30" y1="55" x2="40" y2="55" stroke="#8B4513" stroke-width="1"></line>
+                        <line x1="30" y1="65" x2="40" y2="65" stroke="#8B4513" stroke-width="1"></line>
                         <!-- Brain/AI circuit (right side) -->
-                        <path d="M50,20 L50,80 L80,80 L80,20 Z" fill="#f0f0f0" stroke="#40BFFF" stroke-width="2"></path>
-                        <circle cx="60" cy="30" r="3" fill="#40BFFF"></circle>
-                        <circle cx="70" cy="40" r="3" fill="#40BFFF"></circle>
-                        <circle cx="60" cy="50" r="3" fill="#40BFFF"></circle>
-                        <circle cx="70" cy="60" r="3" fill="#40BFFF"></circle>
-                        <circle cx="60" cy="70" r="3" fill="#40BFFF"></circle>
-                        <path d="M60,30 L70,40 L60,50 L70,60 L60,70" fill="none" stroke="#40BFFF" stroke-width="1.5"></path>
-                        <path d="M55,35 L65,35" fill="none" stroke="#40BFFF" stroke-width="1"></path>
-                        <path d="M55,45 L65,45" fill="none" stroke="#40BFFF" stroke-width="1"></path>
-                        <path d="M55,55 L65,55" fill="none" stroke="#40BFFF" stroke-width="1"></path>
-                        <path d="M55,65 L65,65" fill="none" stroke="#40BFFF" stroke-width="1"></path>
+                        <path d="M50,20 L50,80 L80,80 L80,20 Z" fill="#f0f0f0" stroke="#A0522D" stroke-width="2"></path>
+                        <circle cx="60" cy="30" r="3" fill="#A0522D"></circle>
+                        <circle cx="70" cy="40" r="3" fill="#A0522D"></circle>
+                        <circle cx="60" cy="50" r="3" fill="#A0522D"></circle>
+                        <circle cx="70" cy="60" r="3" fill="#A0522D"></circle>
+                        <circle cx="60" cy="70" r="3" fill="#A0522D"></circle>
+                        <path d="M60,30 L70,40 L60,50 L70,60 L60,70" fill="none" stroke="#A0522D" stroke-width="1.5"></path>
+                        <path d="M55,35 L65,35" fill="none" stroke="#A0522D" stroke-width="1"></path>
+                        <path d="M55,45 L65,45" fill="none" stroke="#A0522D" stroke-width="1"></path>
+                        <path d="M55,55 L65,55" fill="none" stroke="#A0522D" stroke-width="1"></path>
+                        <path d="M55,65 L65,65" fill="none" stroke="#A0522D" stroke-width="1"></path>
                     </svg>
                 </div>
                 <div class="logo-text">
@@ -1880,12 +1904,10 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize page with smooth loading
             document.body.classList.add('loaded');
-            
             // Reveal sections on scroll
             const revealSections = () => {
                 const sections = document.querySelectorAll('section');
                 const windowHeight = window.innerHeight;
-                
                 sections.forEach(section => {
                     const sectionTop = section.getBoundingClientRect().top;
                     if (sectionTop < windowHeight - 100) {
@@ -1893,11 +1915,9 @@
                     }
                 });
             };
-            
             // Run on load and scroll
             window.addEventListener('scroll', revealSections);
             revealSections(); // Run once on page load
-            
             // FAQ Accordion
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
@@ -1913,7 +1933,6 @@
                     item.classList.toggle('active');
                 });
             });
-            
             // Get Demo Buttons - Show modal instead of mailto
             const getDemoButtons = document.querySelectorAll('.get-demo-btn');
             getDemoButtons.forEach(button => {
@@ -1924,20 +1943,17 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
-            
             // QR Modal functionality
             const qrModal = document.getElementById('qrModal');
             const qrModalClose = document.getElementById('qrModalClose');
             const qrModalTitle = document.getElementById('qrModalTitle');
             const qrModalDescription = document.getElementById('qrModalDescription');
             const primaryQrCode = document.getElementById('primaryQrCode');
-            
             // Handle image loading error
             primaryQrCode.addEventListener('error', function() {
                 // Could add fallback content here if needed
                 console.log('QR Code failed to load');
             });
-            
             // Get all "Get Now" buttons
             const getNowButtons = document.querySelectorAll('.get-now-btn');
             getNowButtons.forEach(button => {
@@ -1945,38 +1961,31 @@
                     e.preventDefault();
                     const price = this.getAttribute('data-price');
                     const plan = this.getAttribute('data-plan');
-                    
                     // Update modal content based on selected plan
                     qrModalTitle.textContent = `Complete Your Payment - ${plan}`;
                     qrModalDescription.textContent = `Scan the QR code below to pay ₹${price}`;
-                    
                     // Update QR code with specific amount
                     const qrData = `upi://pay?pa=rehansayyed2006@okaxis&pn=TutorIQ&am=${price}&tn=${plan}%20Payment`;
                     primaryQrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
-                    
                     // Show the modal
                     qrModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
                 });
             });
-            
             // Close modals
             const closeModal = (modal) => {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
             };
-            
             // Close QR modal
             qrModalClose.addEventListener('click', () => {
                 closeModal(qrModal);
             });
-            
             // Close Demo modal
             const demoModalClose = document.getElementById('demoModalClose');
             demoModalClose.addEventListener('click', () => {
                 closeModal(document.getElementById('demoModal'));
             });
-            
             // Close modals when clicking outside
             document.querySelectorAll('.modal').forEach(modal => {
                 modal.addEventListener('click', (e) => {
@@ -1985,7 +1994,6 @@
                     }
                 });
             });
-            
             // Close modals with Escape key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
@@ -1994,12 +2002,10 @@
                     });
                 }
             });
-            
             // Copy email functionality
             const copyEmailBtn = document.getElementById('copyEmailBtn');
             const demoEmail = document.getElementById('demoEmail');
             const copySuccess = document.getElementById('copySuccess');
-            
             copyEmailBtn.addEventListener('click', () => {
                 navigator.clipboard.writeText(demoEmail.textContent).then(() => {
                     copySuccess.classList.add('show');
@@ -2011,7 +2017,6 @@
                     alert('Failed to copy email. Please select and copy manually.');
                 });
             });
-            
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -2025,40 +2030,33 @@
                     }
                 });
             });
-            
             // Fix for mobile scrolling issues
             let touchStartY = 0;
             document.addEventListener('touchstart', function(e) {
                 touchStartY = e.touches[0].clientY;
             }, { passive: true });
-            
             document.addEventListener('touchmove', function(e) {
                 // Allow vertical scrolling
                 const touchY = e.touches[0].clientY;
                 const touchDiff = touchY - touchStartY;
-                
                 // If user is trying to scroll vertically, allow it
                 if (Math.abs(touchDiff) > 10) {
                     return;
                 }
             }, { passive: true });
-            
             // Add touch feedback for buttons
             const touchableElements = document.querySelectorAll('button, .btn-primary, .btn-white, .faq-question');
             touchableElements.forEach(element => {
                 element.addEventListener('touchstart', function() {
                     this.style.transform = 'scale(0.98)';
                 }, { passive: true });
-                
                 element.addEventListener('touchend', function() {
                     this.style.transform = '';
                 }, { passive: true });
-                
                 element.addEventListener('touchcancel', function() {
                     this.style.transform = '';
                 }, { passive: true });
             });
-            
             // Prevent zoom on double tap for mobile
             let lastTouchEnd = 0;
             document.addEventListener('touchend', function(event) {
@@ -2068,21 +2066,18 @@
                 }
                 lastTouchEnd = now;
             }, { passive: false });
-            
             // Fix for Android Chrome specific issues
             if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
                 // Add slight delay to ensure rendering
                 setTimeout(() => {
                     window.scrollTo(0, 0);
                 }, 100);
-                
                 // Force reflow to fix rendering issues
                 document.body.style.display = 'none';
                 document.body.offsetHeight; // Trigger reflow
                 document.body.style.display = '';
             }
         });
-        
         // Fix for Android back button behavior
         window.addEventListener('popstate', function(event) {
             // Close any open modals
@@ -2091,12 +2086,10 @@
                 document.body.style.overflow = '';
             });
         });
-        
         // Initialize history state for Android back button
         if (window.history && window.history.pushState) {
             window.history.pushState(null, null, window.location.href);
         }
-        
         // Ensure proper viewport settings for all devices
         const setViewport = () => {
             const viewport = document.querySelector('meta[name="viewport"]');
@@ -2104,17 +2097,14 @@
                 viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0');
             }
         };
-        
         // Run on load
         window.addEventListener('load', setViewport);
-        
         // Fix for iOS Safari specific issues
         if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
             // Add padding to body to prevent content from being hidden under address bar
             document.body.style.paddingTop = 'env(safe-area-inset-top)';
             document.body.style.paddingBottom = 'env(safe-area-inset-bottom)';
         }
-        
         // Performance optimization - lazy load images if needed
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -2129,7 +2119,6 @@
                     }
                 });
             });
-            
             document.querySelectorAll('img[data-src]').forEach(img => {
                 imageObserver.observe(img);
             });
