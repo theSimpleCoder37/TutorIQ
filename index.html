@@ -124,17 +124,17 @@
             text-align: center;
         }
         .hero h1 {
-            font-size: 26px;
+            font-size: 28px;
             margin-bottom: 12px;
             color: var(--text-dark);
-            font-weight: 600;
+            font-weight: 700;
             /* MODIFICATION START: Applied handwritten font to headings */
             font-family: 'Patrick Hand', cursive;
             /* MODIFICATION END */
         }
         .hero h2 {
-            font-size: 18px;
-            font-weight: 500;
+            font-size: 20px;
+            font-weight: 600;
             color: var(--text-light);
             margin-bottom: 20px;
             /* MODIFICATION START: Applied handwritten font to headings */
@@ -142,12 +142,12 @@
             /* MODIFICATION END */
         }
         .hero .highlight {
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary-purple);
         }
         .hero .coming-soon {
             color: var(--primary-blue);
-            font-weight: 500;
+            font-weight: 600;
         }
         .btn-primary {
             display: inline-block;
@@ -156,7 +156,7 @@
             padding: 14px 28px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             margin-top: 20px;
             transition: all var(--transition-speed) ease;
             box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
@@ -197,15 +197,15 @@
             padding: var(--section-padding);
         }
         .section-title {
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 25px;
             color: var(--text-dark);
             text-align: center;
             position: relative;
             padding-bottom: 15px;
             /* MODIFICATION START: Applied handwritten font to section titles */
             font-family: 'Patrick Hand', cursive;
-            font-weight: 600;
+            font-weight: 700;
             /* MODIFICATION END */
         }
         .section-title::after {
@@ -218,6 +218,67 @@
             height: 3px;
             background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
             border-radius: 3px;
+        }
+        /* How It Works Section */
+        .how-it-works {
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .step {
+            background: white;
+            border-radius: var(--card-border-radius);
+            padding: 30px 25px;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .step:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--card-hover-shadow);
+        }
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-purple);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            /* MODIFICATION START: Applied handwritten font to step number */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        .step h3 {
+            font-size: 20px;
+            margin: 40px 0 15px 0;
+            color: var(--text-dark);
+            font-weight: 600;
+            /* MODIFICATION START: Applied handwritten font to step headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        .step p {
+            font-size: 15px;
+            color: var(--text-light);
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         /* Features Section */
         .features {
@@ -243,7 +304,7 @@
             justify-content: flex-start;
         }
         .feature-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--card-hover-shadow);
         }
         .feature-item i {
@@ -315,7 +376,7 @@
             background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
         }
         .pricing-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--card-hover-shadow);
         }
         .pricing-card.featured {
@@ -454,6 +515,39 @@
         .pricing-card .btn-primary:hover::after {
             left: 120%;
         }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .badge {
+            background: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-purple);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            /* MODIFICATION START: Applied handwritten font to badges */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .badge i {
+            font-size: 16px;
+        }
+        
         /* Testimonials Section */
         .testimonials {
             background-color: var(--bg-light);
@@ -557,8 +651,10 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all var(--transition-speed) ease;
         }
-        .faq-item:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        .faq-item.active {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-left: 4px solid var(--primary-purple);
+            background-color: rgba(139, 69, 19, 0.05);
         }
         .faq-question {
             padding: 20px;
@@ -625,7 +721,7 @@
             justify-content: flex-start;
         }
         .app-feature:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--card-hover-shadow);
         }
         .app-feature i {
@@ -663,6 +759,12 @@
             overflow: hidden;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
             transition: transform 0.5s ease;
+            /* Loading placeholder */
+            background-color: #f0f0f0;
+            opacity: 0.7;
+        }
+        .phone-mockup.loaded {
+            opacity: 1;
         }
         .phone-mockup:hover {
             transform: translateY(-5px);
@@ -719,7 +821,7 @@
             justify-content: flex-start;
         }
         .vision-point:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--card-hover-shadow);
         }
         .vision-point i {
@@ -1000,6 +1102,12 @@
             min-height: 200px;
             max-width: 300px;
             margin: 25px auto;
+            /* Loading placeholder */
+            background-color: #f0f0f0;
+            opacity: 0.7;
+        }
+        .modal-image-container.loaded {
+            opacity: 1;
         }
         .modal-code-image {
             max-width: 100%;
@@ -1071,6 +1179,97 @@
         .copy-success.show {
             opacity: 1;
         }
+        
+        /* Sticky Demo Button */
+        .sticky-demo-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-purple);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+            font-size: 14px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* MODIFICATION START: Applied handwritten font to sticky button */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        .sticky-demo-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+        }
+        .sticky-demo-btn i {
+            font-size: 16px;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            background: var(--primary-blue);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(160, 82, 45, 0.3);
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            /* MODIFICATION START: Applied handwritten font to scroll button */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 6px 20px rgba(160, 82, 45, 0.4);
+        }
+        
+        /* Form Fields Styling (for future use) */
+        .form-field {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            /* MODIFICATION START: Applied handwritten font to form fields */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        .form-field:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
+        }
+        .form-field::placeholder {
+            color: var(--text-light);
+            /* MODIFICATION START: Applied handwritten font to placeholders */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
+        }
+        
         /* Mobile-first responsive adjustments */
         @media (max-width: 480px) {
             :root {
@@ -1093,15 +1292,15 @@
                 padding: 40px 0;
             }
             .hero h1 {
-                font-size: 22px;
+                font-size: 24px;
                 line-height: 1.3;
             }
             .hero h2 {
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 1.4;
             }
             .section-title {
-                font-size: 20px;
+                font-size: 22px;
                 margin-bottom: 15px;
             }
             .section-title::after {
@@ -1256,6 +1455,24 @@
             .hero p span {
                 display: inline-block;
             }
+            
+            /* Sticky button adjustments for mobile */
+            .sticky-demo-btn {
+                padding: 10px 14px;
+                font-size: 13px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .sticky-demo-btn i {
+                font-size: 14px;
+            }
+            .scroll-to-top {
+                bottom: 75px;
+                right: 15px;
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+            }
         }
         /* Tablet and larger screens */
         @media (min-width: 768px) {
@@ -1263,13 +1480,13 @@
                 --mobile-padding: 16px;
             }
             .hero h1 {
-                font-size: 28px;
+                font-size: 30px;
             }
             .hero h2 {
-                font-size: 18px;
+                font-size: 20px;
             }
             .section-title {
-                font-size: 24px;
+                font-size: 26px;
             }
             .feature-list {
                 grid-template-columns: repeat(2, 1fr);
@@ -1315,10 +1532,10 @@
                 font-size: 36px;
             }
             .hero h2 {
-                font-size: 20px;
+                font-size: 22px;
             }
             .section-title {
-                font-size: 30px;
+                font-size: 32px;
                 margin-bottom: 25px;
                 padding-bottom: 20px;
             }
@@ -1591,7 +1808,7 @@
         }
         /* Fix for Android card hover issues */
         @media (hover: none) {
-            .feature-item:hover, .app-feature:hover, .vision-point:hover, .testimonial-card:hover, .pricing-card:hover {
+            .feature-item:hover, .app-feature:hover, .vision-point:hover, .testimonial-card:hover, .pricing-card:hover, .step:hover {
                 transform: none;
             }
         }
@@ -1782,6 +1999,34 @@
             </p>
         </div>
     </section>
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">✨ How It Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Plan</h3>
+                    <p>Select either Single Semester or Full FY Package based on your needs</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pay via UPI</h3>
+                    <p>Secure payment through any UPI app - quick and hassle-free</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Notes Instantly</h3>
+                    <p>Receive your complete notes package via email or WhatsApp within minutes</p>
+                </div>
+            </div>
+            <div class="trust-badges">
+                <div class="badge"><i class="fas fa-users"></i> 50+ Students Served</div>
+                <div class="badge"><i class="fas fa-lock"></i> Secure Payment</div>
+                <div class="badge"><i class="fas fa-bolt"></i> Instant Delivery</div>
+            </div>
+        </div>
+    </section>
     <!-- Features Section -->
     <section class="features">
         <div class="container">
@@ -1845,6 +2090,10 @@
                     </ul>
                     <button class="btn-primary get-now-btn" data-price="99" data-plan="Full FY Package">Get Now</button>
                 </div>
+            </div>
+            <div class="trust-badges">
+                <div class="badge"><i class="fas fa-check-circle"></i> 100% Satisfaction Guaranteed</div>
+                <div class="badge"><i class="fas fa-headphones"></i> 24/7 Support</div>
             </div>
         </div>
     </section>
@@ -1952,7 +2201,9 @@
     <section class="app-preview">
         <div class="container">
             <h2 class="section-title">🎉 Coming Soon — TutorIQ AI App</h2>
-            <div class="phone-mockup floating"></div>
+            <div class="phone-mockup floating">
+                <!-- Image will be loaded via JS -->
+            </div>
             <p style="text-align: center; margin-bottom: 30px;">
                 More than just notes — the <strong>TutorIQ AI App</strong> will make learning effortless:
             </p>
@@ -2031,10 +2282,20 @@
             <p>© 2025 TutorIQ. All rights reserved.<div><span style="color: rgb(156, 163, 175); font-family: ui-sans-serif, system-ui, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; background-color: rgb(17, 24, 39);">Made with ❤️ for SPPU BSc CS Students</span></div></p>
         </div>
     </footer>
+    <!-- Sticky Demo Button -->
+    <a href="#" class="sticky-demo-btn get-demo-btn-sticky">
+        <i class="fas fa-rocket"></i> Get Demo Notes
+    </a>
+    
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
     <!-- QR Code Modal -->
-    <div class="modal" id="qrModal">
+    <div class="modal" id="qrModal" role="dialog" aria-labelledby="qrModalTitle" aria-modal="true">
         <div class="modal-content">
-            <button class="modal-close" id="qrModalClose">×</button>
+            <button class="modal-close" id="qrModalClose" aria-label="Close">×</button>
             <h3 class="modal-title" id="qrModalTitle">Complete Your Payment</h3>
             <p class="modal-description" id="qrModalDescription">Scan the QR code below to pay securely</p>
             <div class="modal-upi" id="qrModalUPI">UPI ID: rehansayyed2006@okaxis</div>
@@ -2045,10 +2306,10 @@
         </div>
     </div>
     <!-- Demo Request Modal -->
-    <div class="modal" id="demoModal">
+    <div class="modal" id="demoModal" role="dialog" aria-labelledby="demoModalTitle" aria-modal="true">
         <div class="modal-content">
-            <button class="modal-close" id="demoModalClose">×</button>
-            <h3 class="modal-title">Get Your Free Demo Notes</h3>
+            <button class="modal-close" id="demoModalClose" aria-label="Close">×</button>
+            <h3 class="modal-title" id="demoModalTitle">Get Your Free Demo Notes</h3>
             <p class="modal-description">To receive your free demo notes, please email us at:</p>
             <div class="demo-email" id="demoEmail">r3h7sayyed@gmail.com</div>
             <button class="copy-btn" id="copyEmailBtn">Copy Email Address</button>
@@ -2074,35 +2335,60 @@
             };
             window.addEventListener('scroll', revealSections);
             revealSections();
+            
+            // FAQ Items with active state
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
                 question.addEventListener('click', () => {
+                    // Close all other items
                     faqItems.forEach(otherItem => {
                         if (otherItem !== item && otherItem.classList.contains('active')) {
                             otherItem.classList.remove('active');
                         }
                     });
+                    // Toggle current item
                     item.classList.toggle('active');
                 });
             });
-            const getDemoButtons = document.querySelectorAll('.get-demo-btn');
+            
+            // Get Demo Buttons
+            const getDemoButtons = document.querySelectorAll('.get-demo-btn, .get-demo-btn-sticky');
             getDemoButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     const demoModal = document.getElementById('demoModal');
                     demoModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                    
+                    // Set focus to first focusable element in modal
+                    setTimeout(() => {
+                        const firstFocusable = demoModal.querySelector('.modal-close, .copy-btn, .demo-email');
+                        if (firstFocusable) {
+                            firstFocusable.focus();
+                        }
+                    }, 100);
                 });
             });
+            
+            // QR Modal setup
             const qrModal = document.getElementById('qrModal');
             const qrModalClose = document.getElementById('qrModalClose');
             const qrModalTitle = document.getElementById('qrModalTitle');
             const qrModalDescription = document.getElementById('qrModalDescription');
             const primaryQrCode = document.getElementById('primaryQrCode');
+            
+            // Add loading state for QR code
+            primaryQrCode.addEventListener('load', function() {
+                this.parentElement.classList.add('loaded');
+            });
+            
             primaryQrCode.addEventListener('error', function() {
                 console.log('QR Code failed to load');
+                this.parentElement.classList.add('loaded'); // Remove loading state even on error
             });
+            
+            // Get Now Buttons
             const getNowButtons = document.querySelectorAll('.get-now-btn');
             getNowButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
@@ -2113,21 +2399,40 @@
                     qrModalDescription.textContent = `Scan the QR code below to pay ₹${price}`;
                     const qrData = `upi://pay?pa=rehansayyed2006@okaxis&pn=TutorIQ&am=${price}&tn=${plan}%20Payment`;
                     primaryQrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
+                    
+                    // Reset loading state
+                    document.querySelector('.modal-image-container').classList.remove('loaded');
+                    
                     qrModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
+                    
+                    // Set focus to first focusable element in modal
+                    setTimeout(() => {
+                        const firstFocusable = qrModal.querySelector('.modal-close');
+                        if (firstFocusable) {
+                            firstFocusable.focus();
+                        }
+                    }, 100);
                 });
             });
+            
+            // Close Modal Function
             const closeModal = (modal) => {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
             };
+            
+            // Close buttons
             qrModalClose.addEventListener('click', () => {
                 closeModal(qrModal);
             });
+            
             const demoModalClose = document.getElementById('demoModalClose');
             demoModalClose.addEventListener('click', () => {
                 closeModal(document.getElementById('demoModal'));
             });
+            
+            // Click outside to close
             document.querySelectorAll('.modal').forEach(modal => {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) {
@@ -2135,13 +2440,37 @@
                     }
                 });
             });
+            
+            // ESC key to close modals
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     document.querySelectorAll('.modal.active').forEach(modal => {
                         closeModal(modal);
                     });
                 }
+                
+                // Trap focus within modal
+                if (e.key === 'Tab' && document.querySelector('.modal.active')) {
+                    const activeModal = document.querySelector('.modal.active');
+                    const focusableElements = activeModal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+                    
+                    if (e.shiftKey) { // Shift + Tab
+                        if (document.activeElement === firstElement) {
+                            e.preventDefault();
+                            lastElement.focus();
+                        }
+                    } else { // Tab
+                        if (document.activeElement === lastElement) {
+                            e.preventDefault();
+                            firstElement.focus();
+                        }
+                    }
+                }
             });
+            
+            // Copy Email Functionality
             const copyEmailBtn = document.getElementById('copyEmailBtn');
             const demoEmail = document.getElementById('demoEmail');
             const copySuccess = document.getElementById('copySuccess');
@@ -2156,22 +2485,29 @@
                     alert('Failed to copy email. Please select and copy manually.');
                 });
             });
+            
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
+                if (!anchor.classList.contains('sticky-demo-btn') && !anchor.classList.contains('scroll-to-top')) {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                }
             });
+            
+            // Touch interactions
             let touchStartY = 0;
             document.addEventListener('touchstart', function(e) {
                 touchStartY = e.touches[0].clientY;
             }, { passive: true });
+            
             document.addEventListener('touchmove', function(e) {
                 const touchY = e.touches[0].clientY;
                 const touchDiff = touchY - touchStartY;
@@ -2179,7 +2515,8 @@
                     return;
                 }
             }, { passive: true });
-            const touchableElements = document.querySelectorAll('button, .btn-primary, .btn-white, .faq-question');
+            
+            const touchableElements = document.querySelectorAll('button, .btn-primary, .btn-white, .faq-question, .sticky-demo-btn, .scroll-to-top');
             touchableElements.forEach(element => {
                 element.addEventListener('touchstart', function() {
                     this.style.transform = 'scale(0.98)';
@@ -2191,6 +2528,7 @@
                     this.style.transform = '';
                 }, { passive: true });
             });
+            
             let lastTouchEnd = 0;
             document.addEventListener('touchend', function(event) {
                 const now = (new Date()).getTime();
@@ -2199,6 +2537,8 @@
                 }
                 lastTouchEnd = now;
             }, { passive: false });
+            
+            // Android fixes
             if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
                 setTimeout(() => {
                     window.scrollTo(0, 0);
@@ -2207,43 +2547,80 @@
                 document.body.offsetHeight;
                 document.body.style.display = '';
             }
+            
+            // Phone mockup image loading
+            const phoneMockup = document.querySelector('.phone-mockup');
+            const phoneImage = new Image();
+            phoneImage.onload = function() {
+                phoneMockup.classList.add('loaded');
+            };
+            phoneImage.onerror = function() {
+                phoneMockup.classList.add('loaded'); // Remove loading state even on error
+            };
+            phoneImage.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='480' viewBox='0 0 240 480'%3E%3Crect width='240' height='480' fill='%23f8f9fa'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Patrick Hand' font-size='24' fill='%238B4513'%3ETutorIQ AI%3C/text%3E%3C/svg%3E";
+            
+            // Scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.add('show');
+                } else {
+                    scrollToTopBtn.classList.remove('show');
+                }
+            });
+            
+            scrollToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Set viewport
+            const setViewport = () => {
+                const viewport = document.querySelector('meta[name="viewport"]');
+                if (viewport) {
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0');
+                }
+            };
+            window.addEventListener('load', setViewport);
+            
+            // iOS safe area
+            if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                document.body.style.paddingTop = 'env(safe-area-inset-top)';
+                document.body.style.paddingBottom = 'env(safe-area-inset-bottom)';
+            }
+            
+            // Lazy loading for images
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                            }
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
         });
+        
         window.addEventListener('popstate', function(event) {
             document.querySelectorAll('.modal.active').forEach(modal => {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
             });
         });
+        
         if (window.history && window.history.pushState) {
             window.history.pushState(null, null, window.location.href);
-        }
-        const setViewport = () => {
-            const viewport = document.querySelector('meta[name="viewport"]');
-            if (viewport) {
-                viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0');
-            }
-        };
-        window.addEventListener('load', setViewport);
-        if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            document.body.style.paddingTop = 'env(safe-area-inset-top)';
-            document.body.style.paddingBottom = 'env(safe-area-inset-bottom)';
-        }
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.removeAttribute('data-src');
-                        }
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
         }
     </script>
 </body>
