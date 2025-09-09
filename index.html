@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#D2B48C">
+    <meta name="theme-color" content="#D2B48C"> <!-- Coffee theme color -->
     <meta name="description" content="TutorIQ - SPPU BSc CS Notes Made Simple. Get exam-focused notes for FY Semester 1 & 2. Affordable, comprehensive, and student-friendly.">
     <title>TutorIQ - Where Procrastinators Get Ahead</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@400;700&family=Handlee&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-purple: #8B4513;
-            --primary-blue: #A0522D;
-            --text-dark: #3E2723;
-            --text-light: #5D4037;
-            --bg-main: #F5F1E6;
+            --primary-purple: #8B4513; /* SaddleBrown - Coffee theme */
+            --primary-blue: #A0522D; /* Sienna - Coffee theme */
+            --text-dark: #3E2723; /* Darker brown for text */
+            --text-light: #5D4037; /* Brown for lighter text */
+            --bg-main: #F5F1E6; /* Light cream - Coffee theme */
             --bg-light: #f8f9fa;
             --border-color: #e9ecef;
             --section-padding: 60px 0;
@@ -27,7 +27,7 @@
             --coffee-beige: #F5F1E6;
             --coffee-brown: #A0522D;
             --coffee-dark: #8B4513;
-            --coffee-accent: #D2B48C;
+            --coffee-accent: #D2B48C; /* Tan - Coffee accent */
         }
         * {
             margin: 0;
@@ -40,7 +40,9 @@
             overflow-x: hidden;
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            /* MODIFICATION START: Applied global handwritten font family */
+            font-family: 'Patrick Hand', 'Handlee', cursive;
+            /* MODIFICATION END */
             color: var(--text-dark);
             line-height: 1.7;
             background-color: var(--bg-main);
@@ -72,9 +74,12 @@
         .logo {
             display: flex;
             align-items: center;
+            /* MODIFICATION START: Applied handwritten font to logo text */
             font-size: 22px;
             font-weight: 700;
             justify-content: center;
+            font-family: 'Handlee', cursive; /* Handwritten style */
+            /* MODIFICATION END */
         }
         .logo-icon {
             width: 36px;
@@ -90,7 +95,9 @@
         .logo-text {
             display: flex;
             align-items: center;
-            font-family: 'Handlee', cursive;
+            /* MODIFICATION START: Removed redundant font-family, now inherited from body */
+            /* font-family: 'Handlee', cursive; */
+            /* MODIFICATION END */
         }
         .logo-text .tutor {
             color: var(--primary-purple);
@@ -121,13 +128,18 @@
             margin-bottom: 12px;
             color: var(--text-dark);
             font-weight: 600;
-            font-family: 'Playfair Display', serif;
+            /* MODIFICATION START: Applied handwritten font to headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .hero h2 {
             font-size: 18px;
             font-weight: 500;
             color: var(--text-light);
             margin-bottom: 20px;
+            /* MODIFICATION START: Applied handwritten font to headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .hero .highlight {
             font-weight: 600;
@@ -156,6 +168,9 @@
             z-index: 1;
             -webkit-tap-highlight-color: transparent;
             min-width: 180px;
+            /* MODIFICATION START: Applied handwritten font to buttons */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .btn-primary::before {
             content: '';
@@ -173,7 +188,7 @@
             transform: translateX(0);
         }
         .btn-primary:hover {
-            background: #7a3d10;
+            background: #7a3d10; /* Darker shade for hover */
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
         }
@@ -188,8 +203,10 @@
             text-align: center;
             position: relative;
             padding-bottom: 15px;
-            font-family: 'Quicksand', sans-serif;
+            /* MODIFICATION START: Applied handwritten font to section titles */
+            font-family: 'Patrick Hand', cursive;
             font-weight: 600;
+            /* MODIFICATION END */
         }
         .section-title::after {
             content: '';
@@ -249,12 +266,17 @@
             margin-bottom: 10px;
             color: var(--text-dark);
             font-weight: 600;
+            /* MODIFICATION START: Applied handwritten font to feature headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .feature-item p {
             font-size: 14px;
             color: var(--text-light);
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
-        /* Pricing Section - ENHANCED FOR MOBILE */
+        /* Pricing Section - MOBILE OPTIMIZED */
         .pricing {
             background-color: var(--bg-main);
         }
@@ -280,20 +302,8 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            /* ENHANCEMENT: Added subtle scaling animation */
-            transform: scale(1);
-            animation: cardEntrance 0.6s ease-out;
-        }
-        /* ENHANCEMENT: Card entrance animation */
-        @keyframes cardEntrance {
-            0% {
-                opacity: 0;
-                transform: translateY(20px) scale(0.95);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
+            /* Coffee theme enhancements */
+            background-image: url("image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2b48c' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
         }
         .pricing-card::before {
             content: '';
@@ -305,16 +315,16 @@
             background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
         }
         .pricing-card:hover {
-            transform: translateY(-5px) scale(1.02);
+            transform: translateY(-5px);
             box-shadow: var(--card-hover-shadow);
         }
         .pricing-card.featured {
             border-color: var(--primary-purple);
-            /* ENHANCEMENT: Added pulsing effect for featured card */
+            /* Coffee theme enhancements */
             animation: pulse 2s infinite;
         }
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4); }
+            0% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.3); }
             70% { box-shadow: 0 0 0 10px rgba(139, 69, 19, 0); }
             100% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0); }
         }
@@ -336,13 +346,17 @@
             font-size: 12px;
             transform: rotate(45deg);
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            /* Coffee theme enhancements */
+            font-family: 'Patrick Hand', cursive;
         }
         .pricing-card h3 {
             font-size: 22px;
             margin-bottom: 15px;
             color: var(--text-dark);
             font-weight: 600;
-            font-family: 'Playfair Display', serif;
+            /* MODIFICATION START: Applied handwritten font to pricing headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .pricing-card .price {
             font-size: 36px;
@@ -351,6 +365,9 @@
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
+            /* MODIFICATION START: Applied handwritten font to price */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .pricing-card .price::after {
             content: '';
@@ -366,6 +383,9 @@
             font-size: 16px;
             font-weight: 400;
             color: var(--text-light);
+            /* MODIFICATION START: Applied handwritten font to price span */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .pricing-card ul {
             list-style: none;
@@ -374,29 +394,38 @@
             padding-left: 0;
             flex-grow: 1;
         }
-        /* FIX: Resolved text overlap with tick marks */
+        /* FIXED: Text overlap and cropping issues */
         .pricing-card ul li {
-            padding: 12px 15px 12px 40px;
+            padding: 12px 15px 12px 40px; /* Increased left padding for icon space */
             border-bottom: 1px solid var(--border-color);
             font-size: 14px;
             position: relative;
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* Align items to top for better text wrapping */
             text-align: left;
+            min-height: 45px; /* Ensure consistent height for items */
+            /* MODIFICATION START: Enhanced text wrapping for list items */
+            word-break: break-word;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            /* MODIFICATION END */
         }
         .pricing-card ul li::before {
             content: "✓";
             color: var(--primary-purple);
             font-weight: bold;
             position: absolute;
-            left: 15px;
+            left: 15px; /* Adjusted position to prevent overlap */
             top: 12px;
             font-size: 16px;
-            width: 20px;
-            height: 20px;
+            width: 20px; /* Fixed width for icon */
+            height: 20px; /* Fixed height for icon */
             display: flex;
             align-items: center;
             justify-content: center;
+            /* MODIFICATION START: Applied handwritten font to checkmark */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .pricing-card ul li:last-child {
             border-bottom: none;
@@ -404,12 +433,26 @@
         .pricing-card .btn-primary {
             margin-top: auto;
             width: 100%;
-            /* ENHANCEMENT: Added hover effect */
+            /* Coffee theme enhancements */
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            /* MODIFICATION START: Font family inherited from .btn-primary */
+            /* MODIFICATION END */
         }
-        .pricing-card .btn-primary:hover {
-            background: #7a3d10;
-            transform: translateY(-2px);
+        .pricing-card .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20px;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            transition: all 0.8s;
+        }
+        .pricing-card .btn-primary:hover::after {
+            left: 120%;
         }
         /* Testimonials Section */
         .testimonials {
@@ -448,12 +491,17 @@
             position: relative;
             z-index: 1;
             padding-left: 15px;
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         .testimonial-card .author {
             font-weight: 600;
             color: var(--text-dark);
             font-size: 15px;
             text-align: right;
+            /* MODIFICATION START: Applied handwritten font to author */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         /* Comparison Section */
         .comparison {
@@ -473,6 +521,9 @@
             padding: 15px 15px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
+            /* MODIFICATION START: Applied handwritten font to table cells */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .comparison-table th {
             background-color: var(--bg-light);
@@ -519,6 +570,9 @@
             font-size: 16px;
             transition: background-color var(--transition-speed) ease;
             -webkit-tap-highlight-color: transparent;
+            /* MODIFICATION START: Applied handwritten font to FAQ question */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .faq-question:hover {
             background-color: rgba(139, 69, 19, 0.05);
@@ -545,6 +599,8 @@
         .faq-answer p {
             font-size: 15px;
             padding: 10px 0;
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         /* App Preview Section */
         .app-preview {
@@ -586,10 +642,15 @@
             margin-bottom: 10px;
             color: var(--text-dark);
             font-weight: 600;
+            /* MODIFICATION START: Applied handwritten font to app feature headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .app-feature p {
             color: var(--text-light);
             font-size: 14px;
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         .phone-mockup {
             width: 200px;
@@ -627,6 +688,9 @@
             color: var(--primary-purple);
             z-index: 2;
             text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+            /* MODIFICATION START: Applied handwritten font to mockup text */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         /* Vision Section */
         .vision {
@@ -672,10 +736,15 @@
             margin-bottom: 10px;
             color: var(--text-dark);
             font-weight: 600;
+            /* MODIFICATION START: Applied handwritten font to vision point headings */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .vision-point p {
             font-size: 14px;
             color: var(--text-light);
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         /* CTA Section */
         .cta {
@@ -702,6 +771,9 @@
             position: relative;
             z-index: 1;
             font-weight: 600;
+            /* MODIFICATION START: Applied handwritten font to CTA heading */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .cta p {
             font-size: 16px;
@@ -711,6 +783,8 @@
             margin-right: auto;
             position: relative;
             z-index: 1;
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         .btn-white {
             display: inline-block;
@@ -728,6 +802,9 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             -webkit-tap-highlight-color: transparent;
             min-width: 180px;
+            /* MODIFICATION START: Applied handwritten font to buttons */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .btn-white::before {
             content: '';
@@ -762,7 +839,9 @@
             color: white;
             position: relative;
             display: inline-block;
-            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION START: Font family is already 'Patrick Hand' */
+            /* font-family: 'Patrick Hand', cursive; */
+            /* MODIFICATION END */
         }
         .slogan::after {
             content: '';
@@ -781,6 +860,9 @@
             text-decoration: none;
             font-size: 14px;
             transition: color var(--transition-speed) ease;
+            /* MODIFICATION START: Applied handwritten font to footer links */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .footer-contact a:hover {
             color: var(--primary-blue);
@@ -854,6 +936,9 @@
             align-items: center;
             justify-content: center;
             -webkit-tap-highlight-color: transparent;
+            /* MODIFICATION START: Applied handwritten font to close button */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .modal-close:hover {
             color: var(--text-dark);
@@ -864,12 +949,17 @@
             font-weight: 600;
             color: var(--primary-purple);
             margin-bottom: 15px;
+            /* MODIFICATION START: Applied handwritten font to modal title */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .modal-description {
             color: var(--text-light);
             margin-bottom: 20px;
             font-size: 16px;
             line-height: 1.5;
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         .modal-upi {
             font-weight: 600;
@@ -881,6 +971,9 @@
             border-radius: 20px;
             display: inline-block;
             word-break: break-all;
+            /* MODIFICATION START: Applied handwritten font to UPI ID */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .modal-instructions {
             font-size: 14px;
@@ -891,6 +984,8 @@
             border-radius: 10px;
             border-left: 3px solid var(--primary-purple);
             text-align: left;
+            /* MODIFICATION START: Font family inherited from body */
+            /* MODIFICATION END */
         }
         .modal-image-container {
             margin: 25px 0;
@@ -935,6 +1030,9 @@
             word-break: break-all;
             cursor: pointer;
             transition: all 0.3s ease;
+            /* MODIFICATION START: Applied handwritten font to demo email */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .demo-email:hover {
             background-color: rgba(139, 69, 19, 0.2);
@@ -951,6 +1049,9 @@
             margin-top: 15px;
             transition: all 0.3s ease;
             font-size: 14px;
+            /* MODIFICATION START: Applied handwritten font to copy button */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .copy-btn:hover {
             background: #7a3d10;
@@ -963,6 +1064,9 @@
             font-size: 14px;
             opacity: 0;
             transition: opacity 0.3s ease;
+            /* MODIFICATION START: Applied handwritten font to copy success message */
+            font-family: 'Patrick Hand', cursive;
+            /* MODIFICATION END */
         }
         .copy-success.show {
             opacity: 1;
@@ -1022,12 +1126,13 @@
                 align-items: center;
                 gap: 15px;
             }
-            /* FIX: Ensured proper card width on mobile */
+            /* FIXED: Card width and padding for mobile */
             .pricing-card {
                 max-width: 100%;
                 padding: 25px 20px;
                 margin-bottom: 15px;
-                width: calc(100% - 20px);
+                width: calc(100% - 20px); /* Prevent overflow */
+                box-sizing: border-box; /* Include padding in width */
             }
             .pricing-card h3 {
                 font-size: 20px;
@@ -1035,10 +1140,11 @@
             .pricing-card .price {
                 font-size: 32px;
             }
-            /* FIX: Adjusted padding to prevent text overlap */
+            /* FIXED: Adjusted padding for better text wrapping on small screens */
             .pricing-card ul li {
                 padding: 10px 12px 10px 35px;
                 font-size: 13px;
+                min-height: 40px;
             }
             .pricing-card ul li::before {
                 left: 12px;
@@ -1142,7 +1248,7 @@
                 padding: 8px 16px;
                 font-size: 13px;
             }
-            /* FIX: Specific fix for emoji overlap on small screens */
+            /* Specific fix for emoji overlap on small screens */
             .hero p, .hero h1, .hero h2 {
                 word-break: break-word;
                 hyphens: auto;
@@ -1259,7 +1365,7 @@
             .pricing-card .price span {
                 font-size: 18px;
             }
-            /* ENHANCEMENT: Improved list styling for desktop */
+            /* Desktop optimized list styling */
             .pricing-card ul {
                 margin-bottom: 35px;
                 padding-left: 0;
@@ -1272,6 +1378,7 @@
                 text-align: left;
                 display: flex;
                 align-items: center;
+                min-height: auto;
             }
             .pricing-card ul li::before {
                 display: flex;
@@ -1444,12 +1551,14 @@
             max-width: 100%;
             height: auto;
         }
-        /* Fix for potential text overflow */
-        h1, h2, h3, h4, h5, h6, p, li {
+        /* MODIFICATION START: Enhanced Global Text Wrapping Rule */
+        h1, h2, h3, h4, h5, h6, p, li, span, div, a, button {
             overflow-wrap: break-word;
             word-wrap: break-word;
             hyphens: auto;
+            /* This ensures all text elements wrap smoothly */
         }
+        /* MODIFICATION END */
         /* Fix for potential z-index issues */
         .pricing-card.featured {
             z-index: 1;
@@ -1461,7 +1570,7 @@
         }
         /* Fix for potential button spacing issues */
         .btn-primary, .btn-white {
-            white-space: nowrap;
+            white-space: normal; /* MODIFICATION: Changed from 'nowrap' to 'normal' to allow button text to wrap if needed */
         }
         /* Fix for Android button tap highlight */
         .btn-primary, .btn-white, .faq-question, .modal-close {
@@ -1559,7 +1668,7 @@
         }
         /* Add subtle background pattern to sections */
         .section-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f8f9fa' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f8f9fa' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             background-size: 30px 30px;
         }
         /* Add floating animation to cards */
@@ -1624,12 +1733,14 @@
             <div class="logo">
                 <div class="logo-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Book pages (left side) -->
                         <path d="M20,20 L20,80 L50,80 L50,20 Z" fill="#f0f0f0" stroke="#8B4513" stroke-width="2"></path>
                         <path d="M25,25 L25,75 L45,75 L45,25 Z" fill="#ffffff" stroke="#8B4513" stroke-width="1"></path>
                         <line x1="30" y1="35" x2="40" y2="35" stroke="#8B4513" stroke-width="1"></line>
                         <line x1="30" y1="45" x2="40" y2="45" stroke="#8B4513" stroke-width="1"></line>
                         <line x1="30" y1="55" x2="40" y2="55" stroke="#8B4513" stroke-width="1"></line>
                         <line x1="30" y1="65" x2="40" y2="65" stroke="#8B4513" stroke-width="1"></line>
+                        <!-- Brain/AI circuit (right side) -->
                         <path d="M50,20 L50,80 L80,80 L80,20 Z" fill="#f0f0f0" stroke="#A0522D" stroke-width="2"></path>
                         <circle cx="60" cy="30" r="3" fill="#A0522D"></circle>
                         <circle cx="70" cy="40" r="3" fill="#A0522D"></circle>
@@ -1704,7 +1815,7 @@
             </div>
         </div>
     </section>
-    <!-- Pricing Section - OPTIMIZED FOR MOBILE -->
+    <!-- Pricing Section - MOBILE OPTIMIZED -->
     <section class="pricing">
         <div class="container">
             <h2 class="section-title">Affordable Pricing</h2>
@@ -1874,7 +1985,7 @@
         <div class="container">
             <h2 class="section-title">❤️ The Vision</h2>
             <p style="max-width: 800px; margin: 0 auto 30px;">
-                TutorIQ begins with <strong>SPPU BSc CS FY Notes (Sem 1 &amp; Sem 2)</strong> — but that's just the start. 
+                TutorIQ begins with <strong>SPPU BSc CS FY Notes (Sem 1 &amp; Sem 2)</strong> — but that's just the start.
                 <strong>SY &amp; TY notes are on the way</strong>, plus the <strong>AI learning app</strong> to make everything simpler.
             </p>
             <div class="vision-points card-grid">
