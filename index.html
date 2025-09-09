@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#D2B48C"> <!-- Coffee theme color -->
+    <meta name="theme-color" content="#D2B48C">
     <meta name="description" content="TutorIQ - SPPU BSc CS Notes Made Simple. Get exam-focused notes for FY Semester 1 & 2. Affordable, comprehensive, and student-friendly.">
     <title>TutorIQ - Where Procrastinators Get Ahead</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@400;700&family=Handlee&family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-purple: #8B4513; /* SaddleBrown - Coffee theme */
-            --primary-blue: #A0522D; /* Sienna - Coffee theme */
-            --text-dark: #3E2723; /* Darker brown for text */
-            --text-light: #5D4037; /* Brown for lighter text */
-            --bg-main: #F5F1E6; /* Light cream - Coffee theme */
+            --primary-purple: #8B4513;
+            --primary-blue: #A0522D;
+            --text-dark: #3E2723;
+            --text-light: #5D4037;
+            --bg-main: #F5F1E6;
             --bg-light: #f8f9fa;
             --border-color: #e9ecef;
             --section-padding: 60px 0;
@@ -27,7 +27,7 @@
             --coffee-beige: #F5F1E6;
             --coffee-brown: #A0522D;
             --coffee-dark: #8B4513;
-            --coffee-accent: #D2B48C; /* Tan - Coffee accent */
+            --coffee-accent: #D2B48C;
         }
         * {
             margin: 0;
@@ -90,7 +90,7 @@
         .logo-text {
             display: flex;
             align-items: center;
-            font-family: 'Handlee', cursive; /* Handwritten style */
+            font-family: 'Handlee', cursive;
         }
         .logo-text .tutor {
             color: var(--primary-purple);
@@ -173,7 +173,7 @@
             transform: translateX(0);
         }
         .btn-primary:hover {
-            background: #7a3d10; /* Darker shade for hover */
+            background: #7a3d10;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
         }
@@ -254,7 +254,7 @@
             font-size: 14px;
             color: var(--text-light);
         }
-        /* Pricing Section */
+        /* Pricing Section - ENHANCED FOR MOBILE */
         .pricing {
             background-color: var(--bg-main);
         }
@@ -280,6 +280,20 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            /* ENHANCEMENT: Added subtle scaling animation */
+            transform: scale(1);
+            animation: cardEntrance 0.6s ease-out;
+        }
+        /* ENHANCEMENT: Card entrance animation */
+        @keyframes cardEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
         .pricing-card::before {
             content: '';
@@ -291,11 +305,18 @@
             background: linear-gradient(90deg, var(--primary-purple), var(--primary-blue));
         }
         .pricing-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: var(--card-hover-shadow);
         }
         .pricing-card.featured {
             border-color: var(--primary-purple);
+            /* ENHANCEMENT: Added pulsing effect for featured card */
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(139, 69, 19, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0); }
         }
         .pricing-card.featured::before {
             height: 100%;
@@ -350,26 +371,32 @@
             list-style: none;
             margin-bottom: 30px;
             text-align: left;
-            padding-left: 10px;
+            padding-left: 0;
             flex-grow: 1;
         }
+        /* FIX: Resolved text overlap with tick marks */
         .pricing-card ul li {
-            padding: 10px 0;
+            padding: 12px 15px 12px 40px;
             border-bottom: 1px solid var(--border-color);
             font-size: 14px;
             position: relative;
-            padding-left: 25px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            text-align: left;
         }
         .pricing-card ul li::before {
             content: "✓";
             color: var(--primary-purple);
             font-weight: bold;
             position: absolute;
-            left: 0;
-            top: 10px;
-            font-size: 14px;
+            left: 15px;
+            top: 12px;
+            font-size: 16px;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .pricing-card ul li:last-child {
             border-bottom: none;
@@ -377,6 +404,12 @@
         .pricing-card .btn-primary {
             margin-top: auto;
             width: 100%;
+            /* ENHANCEMENT: Added hover effect */
+            transition: all 0.3s ease;
+        }
+        .pricing-card .btn-primary:hover {
+            background: #7a3d10;
+            transform: translateY(-2px);
         }
         /* Testimonials Section */
         .testimonials {
@@ -729,7 +762,7 @@
             color: white;
             position: relative;
             display: inline-block;
-            font-family: 'Patrick Hand', cursive; /* Handwritten style */
+            font-family: 'Patrick Hand', cursive;
         }
         .slogan::after {
             content: '';
@@ -957,11 +990,11 @@
             }
             .hero h1 {
                 font-size: 22px;
-                line-height: 1.3; /* Added line-height for better spacing */
+                line-height: 1.3;
             }
             .hero h2 {
                 font-size: 16px;
-                line-height: 1.4; /* Added line-height for better spacing */
+                line-height: 1.4;
             }
             .section-title {
                 font-size: 20px;
@@ -989,10 +1022,12 @@
                 align-items: center;
                 gap: 15px;
             }
+            /* FIX: Ensured proper card width on mobile */
             .pricing-card {
                 max-width: 100%;
                 padding: 25px 20px;
                 margin-bottom: 15px;
+                width: calc(100% - 20px);
             }
             .pricing-card h3 {
                 font-size: 20px;
@@ -1000,9 +1035,17 @@
             .pricing-card .price {
                 font-size: 32px;
             }
+            /* FIX: Adjusted padding to prevent text overlap */
             .pricing-card ul li {
+                padding: 10px 12px 10px 35px;
                 font-size: 13px;
-                padding: 8px 0;
+            }
+            .pricing-card ul li::before {
+                left: 12px;
+                top: 10px;
+                font-size: 14px;
+                width: 18px;
+                height: 18px;
             }
             .testimonial-cards {
                 gap: 20px;
@@ -1099,13 +1142,13 @@
                 padding: 8px 16px;
                 font-size: 13px;
             }
-            /* Specific fix for emoji overlap on small screens */
+            /* FIX: Specific fix for emoji overlap on small screens */
             .hero p, .hero h1, .hero h2 {
-                word-break: break-word; /* Ensures long words break correctly */
-                hyphens: auto; /* Adds hyphens where appropriate */
+                word-break: break-word;
+                hyphens: auto;
             }
             .hero p span {
-                display: inline-block; /* Prevents emojis from wrapping oddly */
+                display: inline-block;
             }
         }
         /* Tablet and larger screens */
@@ -1216,20 +1259,27 @@
             .pricing-card .price span {
                 font-size: 18px;
             }
+            /* ENHANCEMENT: Improved list styling for desktop */
             .pricing-card ul {
                 margin-bottom: 35px;
                 padding-left: 0;
                 text-align: center;
             }
             .pricing-card ul li {
-                padding: 12px 0;
+                padding: 12px 20px 12px 45px;
                 font-size: 15px;
                 border: none;
-                text-align: center;
-                padding-left: 0;
+                text-align: left;
+                display: flex;
+                align-items: center;
             }
             .pricing-card ul li::before {
-                display: none;
+                display: flex;
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 25px;
+                height: 25px;
             }
             .testimonial-cards {
                 gap: 30px;
@@ -1574,14 +1624,12 @@
             <div class="logo">
                 <div class="logo-icon">
                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Book pages (left side) -->
                         <path d="M20,20 L20,80 L50,80 L50,20 Z" fill="#f0f0f0" stroke="#8B4513" stroke-width="2"></path>
                         <path d="M25,25 L25,75 L45,75 L45,25 Z" fill="#ffffff" stroke="#8B4513" stroke-width="1"></path>
                         <line x1="30" y1="35" x2="40" y2="35" stroke="#8B4513" stroke-width="1"></line>
                         <line x1="30" y1="45" x2="40" y2="45" stroke="#8B4513" stroke-width="1"></line>
                         <line x1="30" y1="55" x2="40" y2="55" stroke="#8B4513" stroke-width="1"></line>
                         <line x1="30" y1="65" x2="40" y2="65" stroke="#8B4513" stroke-width="1"></line>
-                        <!-- Brain/AI circuit (right side) -->
                         <path d="M50,20 L50,80 L80,80 L80,20 Z" fill="#f0f0f0" stroke="#A0522D" stroke-width="2"></path>
                         <circle cx="60" cy="30" r="3" fill="#A0522D"></circle>
                         <circle cx="70" cy="40" r="3" fill="#A0522D"></circle>
@@ -1656,7 +1704,7 @@
             </div>
         </div>
     </section>
-    <!-- Pricing Section -->
+    <!-- Pricing Section - OPTIMIZED FOR MOBILE -->
     <section class="pricing">
         <div class="container">
             <h2 class="section-title">Affordable Pricing</h2>
@@ -1902,9 +1950,7 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize page with smooth loading
             document.body.classList.add('loaded');
-            // Reveal sections on scroll
             const revealSections = () => {
                 const sections = document.querySelectorAll('section');
                 const windowHeight = window.innerHeight;
@@ -1915,25 +1961,20 @@
                     }
                 });
             };
-            // Run on load and scroll
             window.addEventListener('scroll', revealSections);
-            revealSections(); // Run once on page load
-            // FAQ Accordion
+            revealSections();
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
                 question.addEventListener('click', () => {
-                    // Close all other items
                     faqItems.forEach(otherItem => {
                         if (otherItem !== item && otherItem.classList.contains('active')) {
                             otherItem.classList.remove('active');
                         }
                     });
-                    // Toggle current item
                     item.classList.toggle('active');
                 });
             });
-            // Get Demo Buttons - Show modal instead of mailto
             const getDemoButtons = document.querySelectorAll('.get-demo-btn');
             getDemoButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
@@ -1943,50 +1984,39 @@
                     document.body.style.overflow = 'hidden';
                 });
             });
-            // QR Modal functionality
             const qrModal = document.getElementById('qrModal');
             const qrModalClose = document.getElementById('qrModalClose');
             const qrModalTitle = document.getElementById('qrModalTitle');
             const qrModalDescription = document.getElementById('qrModalDescription');
             const primaryQrCode = document.getElementById('primaryQrCode');
-            // Handle image loading error
             primaryQrCode.addEventListener('error', function() {
-                // Could add fallback content here if needed
                 console.log('QR Code failed to load');
             });
-            // Get all "Get Now" buttons
             const getNowButtons = document.querySelectorAll('.get-now-btn');
             getNowButtons.forEach(button => {
                 button.addEventListener('click', function(e) {
                     e.preventDefault();
                     const price = this.getAttribute('data-price');
                     const plan = this.getAttribute('data-plan');
-                    // Update modal content based on selected plan
                     qrModalTitle.textContent = `Complete Your Payment - ${plan}`;
                     qrModalDescription.textContent = `Scan the QR code below to pay ₹${price}`;
-                    // Update QR code with specific amount
                     const qrData = `upi://pay?pa=rehansayyed2006@okaxis&pn=TutorIQ&am=${price}&tn=${plan}%20Payment`;
                     primaryQrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
-                    // Show the modal
                     qrModal.classList.add('active');
                     document.body.style.overflow = 'hidden';
                 });
             });
-            // Close modals
             const closeModal = (modal) => {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
             };
-            // Close QR modal
             qrModalClose.addEventListener('click', () => {
                 closeModal(qrModal);
             });
-            // Close Demo modal
             const demoModalClose = document.getElementById('demoModalClose');
             demoModalClose.addEventListener('click', () => {
                 closeModal(document.getElementById('demoModal'));
             });
-            // Close modals when clicking outside
             document.querySelectorAll('.modal').forEach(modal => {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) {
@@ -1994,7 +2024,6 @@
                     }
                 });
             });
-            // Close modals with Escape key
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     document.querySelectorAll('.modal.active').forEach(modal => {
@@ -2002,7 +2031,6 @@
                     });
                 }
             });
-            // Copy email functionality
             const copyEmailBtn = document.getElementById('copyEmailBtn');
             const demoEmail = document.getElementById('demoEmail');
             const copySuccess = document.getElementById('copySuccess');
@@ -2017,7 +2045,6 @@
                     alert('Failed to copy email. Please select and copy manually.');
                 });
             });
-            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -2030,21 +2057,17 @@
                     }
                 });
             });
-            // Fix for mobile scrolling issues
             let touchStartY = 0;
             document.addEventListener('touchstart', function(e) {
                 touchStartY = e.touches[0].clientY;
             }, { passive: true });
             document.addEventListener('touchmove', function(e) {
-                // Allow vertical scrolling
                 const touchY = e.touches[0].clientY;
                 const touchDiff = touchY - touchStartY;
-                // If user is trying to scroll vertically, allow it
                 if (Math.abs(touchDiff) > 10) {
                     return;
                 }
             }, { passive: true });
-            // Add touch feedback for buttons
             const touchableElements = document.querySelectorAll('button, .btn-primary, .btn-white, .faq-question');
             touchableElements.forEach(element => {
                 element.addEventListener('touchstart', function() {
@@ -2057,7 +2080,6 @@
                     this.style.transform = '';
                 }, { passive: true });
             });
-            // Prevent zoom on double tap for mobile
             let lastTouchEnd = 0;
             document.addEventListener('touchend', function(event) {
                 const now = (new Date()).getTime();
@@ -2066,46 +2088,35 @@
                 }
                 lastTouchEnd = now;
             }, { passive: false });
-            // Fix for Android Chrome specific issues
             if (navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
-                // Add slight delay to ensure rendering
                 setTimeout(() => {
                     window.scrollTo(0, 0);
                 }, 100);
-                // Force reflow to fix rendering issues
                 document.body.style.display = 'none';
-                document.body.offsetHeight; // Trigger reflow
+                document.body.offsetHeight;
                 document.body.style.display = '';
             }
         });
-        // Fix for Android back button behavior
         window.addEventListener('popstate', function(event) {
-            // Close any open modals
             document.querySelectorAll('.modal.active').forEach(modal => {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
             });
         });
-        // Initialize history state for Android back button
         if (window.history && window.history.pushState) {
             window.history.pushState(null, null, window.location.href);
         }
-        // Ensure proper viewport settings for all devices
         const setViewport = () => {
             const viewport = document.querySelector('meta[name="viewport"]');
             if (viewport) {
                 viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0');
             }
         };
-        // Run on load
         window.addEventListener('load', setViewport);
-        // Fix for iOS Safari specific issues
         if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-            // Add padding to body to prevent content from being hidden under address bar
             document.body.style.paddingTop = 'env(safe-area-inset-top)';
             document.body.style.paddingBottom = 'env(safe-area-inset-bottom)';
         }
-        // Performance optimization - lazy load images if needed
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
